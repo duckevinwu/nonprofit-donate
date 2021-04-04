@@ -3,12 +3,17 @@ const express = require('express');
 var routes = require("./routes.js");
 const path = require('path');
 const cors = require('cors');
+const enforce = require('express-sslify');
 
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+}
 
 /* ---------------------------------------------------------------- */
 /* ------------------- Route handler registration ----------------- */

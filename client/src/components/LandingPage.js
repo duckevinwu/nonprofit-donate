@@ -30,7 +30,7 @@ export default class LandingPage extends React.Component {
           <div className="container mx-auto flex px-5 pb-36 md:flex-row flex-col md:justify-center">
             <div className="md:w-5/12">
               <div className="flex flex-col">
-                <h2 className="playfair text-white text-2xl">We all know what's wrong.</h2>
+                <h2 className="playfair text-white text-3xl">We all know what's wrong.</h2>
                 <p className="border-l-2 border-gray-400 pl-2 mt-4">Nonprofits are doing crucial work for society, but they are underfunded.</p>
                 <p className="border-l-2 border-gray-400 pl-2 mt-4">For-profits want to help nonprofits and hit Corporate Social Responsibility (CSR) goals, but they don’t want to harm their bottom line in the process.</p>
               </div>
@@ -40,13 +40,13 @@ export default class LandingPage extends React.Component {
             </div>
             <div className="md:w-5/12 md:flex md:flex-col-reverse md:ml-auto">
               <div className="flex flex-col mt-24 md:mt-16">
-                <h2 className="playfair text-white text-2xl text-right">Benefact solves both problems.</h2>
-                <div className="w-full">
-                  <p className="border-r-2 border-gray-400 pr-2 mt-4 float-right">We help for-profits support nonprofits through tech-enabled campaigns instead of direct donations.</p>
-                </div>
-                <div className="w-full">
-                  <p className="border-r-2 border-gray-400 pr-2 mt-4 float-right">As an outcome, nonprofits raise more money and for-profits hit CSR goals without harming their bottom line.</p>
-                </div>
+                <h2 className="playfair text-white text-3xl text-right">Benefact solves both problems.</h2>
+
+                  <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">We help for-profits support nonprofits through tech-enabled campaigns instead of direct donations.</p>
+
+
+                  <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">As an outcome, nonprofits raise more money and for-profits hit CSR goals without harming their bottom line.</p>
+
               </div>
               <div className="mt-8 md:mt-0 flex justify-center h-full">
                 <img className="object-cover object-center rounded img1" alt="solution" src="https://images.unsplash.com/photo-1536240690077-e2f548bc5405?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
