@@ -4,7 +4,7 @@ import {
 	Route,
 	Switch
 } from 'react-router-dom';
-import Test from './Test';
+import LandingPage from './LandingPage';
 import TestCampaign from './TestCampaign';
 
 export default class App extends React.Component {
@@ -17,13 +17,8 @@ export default class App extends React.Component {
 						<Route
 							exact
 							path="/"
-
-						/>
-						<Route
-							exact
-							path="/dashboard"
 							render={() => (
-								<Test />
+								<LandingPage />
 							)}
 						/>
 						<Route

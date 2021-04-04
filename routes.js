@@ -18,7 +18,13 @@ function getTestCampaign(req, res) {
 
     result.on('data', (d) => {
       // process.stdout.write(d);
-      res.send(d)
+      try {
+        // convert buffer to json
+        const resultJson = JSON.parse(d);
+        res.json(resultJson);
+      } catch (error) {
+        console.error(error)
+      }
     });
 
   }).on('error', (e) => {
