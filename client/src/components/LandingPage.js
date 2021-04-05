@@ -5,10 +5,16 @@ export default class LandingPage extends React.Component {
   render() {
     return (
       <div className="landing-wrapper bg-gray-900">
-        <div className="section-wrapper flex items-center">
+        <div className="w-full logo-container flex items-center">
+          <div className="container mx-auto flex items-center mt-6">
+            <img className="h-16 w-16" alt="logo" src="https://i.ibb.co/wBHTLK9/169087307-1111438542694589-1773721679902646600-n.png"></img>
+            <div className="text-white ubuntu text-xl">Benefact</div>
+          </div>
+        </div>
+        <div className="top-section-wrapper flex items-center">
           <div className="absolute dot-grid md:w-3/5 md:block hidden top-0 right-0"></div>
           <section className="text-gray-400 body-font z-10 w-full">
-            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div className="container mx-auto flex px-5 pt-24 pb-36 md:flex-row flex-col items-center relative">
               <div className="lg:flex-grow flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                 <h1 className="playfair text-4xl md:text-5xl mb-6 font-medium text-white">
                   Raise. Impact. Together.
@@ -35,21 +41,17 @@ export default class LandingPage extends React.Component {
                 <p className="border-l-2 border-gray-400 pl-2 mt-4">For-profits want to help nonprofits and hit Corporate Social Responsibility (CSR) goals, but they don’t want to harm their bottom line in the process.</p>
               </div>
               <div className="mt-8 md:mt-16 flex justify-center h-full">
-                <img className="object-cover object-center rounded img1" alt="problem" src="https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"/>
+                <img className="object-cover object-center rounded img1" alt="problem" src="https://i.ibb.co/fChGK80/volunteer.jpg"/>
               </div>
             </div>
             <div className="md:w-5/12 md:flex md:flex-col-reverse md:ml-auto">
               <div className="flex flex-col mt-24 md:mt-16">
                 <h2 className="playfair text-white text-3xl text-right">Benefact solves both problems.</h2>
-
                   <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">We help for-profits support nonprofits through tech-enabled campaigns instead of direct donations.</p>
-
-
-                  <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">As an outcome, nonprofits raise more money and for-profits hit CSR goals without harming their bottom line.</p>
-
+                  <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">Our outcome: Nonprofits raise more money and for-profits hit CSR goals without harming their bottom line.</p>
               </div>
               <div className="mt-8 md:mt-0 flex justify-center h-full">
-                <img className="object-cover object-center rounded img1" alt="solution" src="https://images.unsplash.com/photo-1536240690077-e2f548bc5405?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"/>
+                <img className="object-cover object-center rounded img1" alt="solution" src="https://i.ibb.co/nkzkrhC/corporate.jpg"/>
               </div>
             </div>
           </div>
