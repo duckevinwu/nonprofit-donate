@@ -68,7 +68,7 @@ export default class LandingPage extends React.Component {
               <div className="container mx-auto flex px-5 pt-24 pb-36 md:flex-row flex-col items-center relative">
                 <div className="lg:flex-grow flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                   <h1 className="playfair text-4xl md:text-5xl mb-6 font-medium text-white">
-                    Raise. Impact. Together.
+                    A new way to give back.
                   </h1>
                   <p className="text-xl leading-relaxed">
                     Benefact unites nonprofits and for-profits to raise money and increase impact.
