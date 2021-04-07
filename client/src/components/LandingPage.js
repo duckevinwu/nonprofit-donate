@@ -116,15 +116,15 @@ export default class LandingPage extends React.Component {
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
                     <i className="fas fa-ban text-green-300 text-4xl"></i>
                   </div>
-                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Zero risk</div>
-                  <div>You don't pay unless you raise money</div>
+                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Minimal time burden</div>
+                  <div>We manage your entire donation campaign so you can focus on your core mission</div>
                 </div>
                 <div className="flex flex-col md:w-1/3 md:px-6 py-6">
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
                     <i className="fas fa-clock text-green-300 text-4xl"></i>
                   </div>
-                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Minimal time burden</div>
-                  <div>We manage your entire donation campaign so you can focus on your core mission</div>
+                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Zero risk</div>
+                  <div>You don't pay unless you raise money</div>
                 </div>
                 <div className="flex flex-col md:w-1/3 py-6">
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
