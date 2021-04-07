@@ -110,7 +110,7 @@ export default class LandingPage extends React.Component {
           <section className="text-gray-400 body-font bg-gray-800">
             <div className="container mx-auto flex px-5 py-24 flex-col">
               <div className="uppercase tracking-widest text-lg">For nonprofits</div>
-              <div className="text-white playfair text-3xl mb-6">Start raising money with zero effort.</div>
+              <div className="text-white playfair text-3xl mb-6">Start raising money effortlessly.</div>
               <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col md:w-1/3 py-6">
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
@@ -124,7 +124,7 @@ export default class LandingPage extends React.Component {
                     <i className="fas fa-clock text-green-300 text-4xl"></i>
                   </div>
                   <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Minimal time burden</div>
-                  <div>We do all the heavy lifting so you can get back to your core mission</div>
+                  <div>We manage your entire donation campaign so you can focus on your core mission</div>
                 </div>
                 <div className="flex flex-col md:w-1/3 py-6">
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
@@ -153,7 +153,7 @@ export default class LandingPage extends React.Component {
                     <i className="fas fa-tasks text-blue-300 text-4xl"></i>
                   </div>
                   <div className="text-white text-xl pl-2 my-2 border-l-4 border-white">Mission alignment</div>
-                  <div>We find nonprofits that that align with your core business</div>
+                  <div>We match you with nonprofits that align with your core business</div>
                 </div>
                 <div className="flex flex-col md:w-1/3 py-6">
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
