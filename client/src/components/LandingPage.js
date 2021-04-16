@@ -2,56 +2,6 @@ import React from 'react';
 import '../style/LandingPage.css';
 
 export default class LandingPage extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      nonprofitModal: 'modal-closed',
-      forprofitModal: 'modal-closed'
-    }
-
-    this.openModal = this.openModal.bind(this)
-    this.closeModal = this.closeModal.bind(this)
-  }
-
-  openModal(e) {
-    let modalName = e.target.value
-    let modalObj = {}
-
-    switch(modalName) {
-      case 'nonprofit':
-        modalObj = { nonprofitModal: '' }
-        break
-      case 'forprofit':
-        modalObj = { forprofitModal: '' }
-        break
-      default:
-        break
-    }
-
-    document.body.style.overflowY = 'hidden';
-    this.setState(modalObj)
-  }
-
-  closeModal(e) {
-    let modalName = e.target.value
-    let modalObj = {}
-
-    switch(modalName) {
-      case 'nonprofit':
-        modalObj = { nonprofitModal: 'modal-closed' }
-        break
-      case 'forprofit':
-        modalObj = { forprofitModal: 'modal-closed' }
-        break
-      default:
-        break
-    }
-
-    document.body.style.overflowY = 'auto';
-    this.setState(modalObj)
-  }
-
   render() {
     return (
       <>
@@ -71,7 +21,7 @@ export default class LandingPage extends React.Component {
                     A new way to give back.
                   </h1>
                   <p className="text-xl leading-relaxed">
-                    Benefact unites nonprofits and for-profits to raise money and increase impact.
+                    Raise money for nonprofits that you care about and get paid to do so.
                   </p>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 opacity-0 md:block hidden">
@@ -89,7 +39,7 @@ export default class LandingPage extends React.Component {
                 <div className="flex flex-col">
                   <h2 className="playfair text-white text-3xl">We all know what's wrong.</h2>
                   <p className="border-l-2 border-gray-400 pl-2 mt-4">Nonprofits are doing crucial work for society, but they are underfunded.</p>
-                  <p className="border-l-2 border-gray-400 pl-2 mt-4">For-profits want to help nonprofits and hit Corporate Social Responsibility (CSR) goals, but they don’t want to harm their bottom line in the process.</p>
+                  <p className="border-l-2 border-gray-400 pl-2 mt-4">People want to help nonprofits fundraise, but there’s no economic incentive that values the time and effort that goes into peer-to-peer fundraising.</p>
                 </div>
                 <div className="mt-8 md:mt-16 flex justify-center h-full">
                   <img className="object-cover object-center rounded img1" alt="problem" src="https://i.ibb.co/fChGK80/volunteer.jpg"/>
@@ -98,8 +48,8 @@ export default class LandingPage extends React.Component {
               <div className="md:w-5/12 md:flex md:flex-col-reverse md:ml-auto">
                 <div className="flex flex-col mt-24 md:mt-16">
                   <h2 className="playfair text-white text-3xl text-right">Benefact solves both problems.</h2>
-                    <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">We help for-profits support nonprofits through tech-enabled campaigns instead of direct donations.</p>
-                    <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">Our outcome: Nonprofits raise more money and for-profits hit CSR goals without harming their bottom line.</p>
+                    <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">We enable anyone to fundraise for nonprofits and get paid to do so.</p>
+                    <p className="border-r-2 border-gray-400 pr-2 mt-4 text-right">Our mission is to make fundraising a collaborative effort and reward fundraisers for their time and effort.</p>
                 </div>
                 <div className="mt-8 md:mt-0 flex justify-center h-full">
                   <img className="object-cover object-center rounded img1" alt="solution" src="https://i.ibb.co/nkzkrhC/corporate.jpg"/>
@@ -109,58 +59,36 @@ export default class LandingPage extends React.Component {
           </section>
           <section className="text-gray-400 body-font bg-gray-800">
             <div className="container mx-auto flex px-5 py-24 flex-col">
-              <div className="uppercase tracking-widest text-lg">For nonprofits</div>
-              <div className="text-white playfair text-3xl mb-6">Start raising money effortlessly.</div>
-              <div className="flex flex-col md:flex-row">
-                <div className="flex flex-col md:w-1/3 py-6">
-                  <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
-                    <i className="fas fa-ban text-green-300 text-4xl"></i>
-                  </div>
-                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Minimal time burden</div>
-                  <div>We manage your entire donation campaign so you can focus on your core mission</div>
-                </div>
-                <div className="flex flex-col md:w-1/3 md:px-6 py-6">
-                  <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
-                    <i className="fas fa-clock text-green-300 text-4xl"></i>
-                  </div>
-                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Zero risk</div>
-                  <div>You don't pay unless you raise money</div>
-                </div>
-                <div className="flex flex-col md:w-1/3 py-6">
-                  <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
-                    <i className="far fa-handshake text-green-300 text-4xl"></i>
-                  </div>
-                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">New partnerships</div>
-                  <div>Develop new relationships with for-profits that go beyond our donation campaigns</div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="text-gray-400 body-font bg-gray-800">
-            <div className="container mx-auto flex px-5 py-24 flex-col border-t-2 border-gray-500">
-              <div className="uppercase tracking-widest text-lg">For for-profits</div>
-              <div className="text-white playfair text-3xl mb-6">The new way to hit your CSR goals.</div>
-              <div className="flex flex-col md:flex-row">
-                <div className="flex flex-col md:w-1/3 py-6">
-                  <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
-                    <i className="fas fa-sort-amount-up text-blue-300 text-4xl"></i>
-                  </div>
-                  <div className="text-white text-xl pl-2 my-2 border-l-4 border-white">Advance CSR goals</div>
-                  <div>Support local, national, or international nonprofits without harming your bottom line</div>
-                </div>
-                <div className="flex flex-col md:w-1/3 md:px-6 py-6">
+              <div className="uppercase tracking-widest text-lg">How it works</div>
+              <div className="text-white playfair text-3xl mb-6">Support amazing nonprofits and earn money.</div>
+              <div className="flex flex-col md:flex-row md:flex-wrap">
+                <div className="flex flex-col md:w-1/2 md:pr-2 lg:w-1/4 py-6">
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
                     <i className="fas fa-tasks text-blue-300 text-4xl"></i>
                   </div>
-                  <div className="text-white text-xl pl-2 my-2 border-l-4 border-white">Mission alignment</div>
-                  <div>We match you with nonprofits that align with your core business</div>
+                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">View nonprofits</div>
+                  <div>We handpick outstanding local nonprofits that you can fundraise for</div>
                 </div>
-                <div className="flex flex-col md:w-1/3 py-6">
+                <div className="flex flex-col md:w-1/2 lg:w-1/4 lg:pl-6 py-6">
                   <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
-                    <i className="fas fa-users text-blue-300 text-4xl"></i>
+                    <i className="far fa-hand-point-up text-red-300 text-4xl"></i>
                   </div>
-                  <div className="text-white text-xl pl-2 my-2 border-l-4 border-white">Beyond direct donations</div>
-                  <div>Our campaigns foster the next generation of donors and altruistic-minded individuals</div>
+                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Pick your favorite</div>
+                  <div>Click on a nonprofit to view their mission, fundraising goals, and more</div>
+                </div>
+                <div className="flex flex-col md:w-1/2 md:pr-2 lg:w-1/4 lg:px-6 py-6">
+                  <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
+                    <i className="fas fa-sort-amount-up text-purple-300 text-4xl"></i>
+                  </div>
+                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Begin fundraising</div>
+                  <div>Sign up to be a fundraiser and we’ll send you your unique fundraising link</div>
+                </div>
+                <div className="flex flex-col md:w-1/2 lg:w-1/4 py-6">
+                  <div className="w-16 h-16 flex justify-center items-center bg-gray-700 rounded-full mb-2">
+                    <i className="fas fa-money-bill text-green-300 text-4xl"></i>
+                  </div>
+                  <div className="text-white text-xl pl-2 my-3 border-l-4 border-white">Get paid</div>
+                  <div>At the end of the fundraising campaign, you’ll get a 4% cut of the amount that you fundraised</div>
                 </div>
               </div>
             </div>
@@ -170,27 +98,15 @@ export default class LandingPage extends React.Component {
               <div className="text-center md:text-left">
                 <div className="text-white playfair text-3xl mb-6">What are you waiting for?</div>
                 <p className="mb-8 lg:mb-0 text-lg">
-                  Contact us today to start raising money and expanding your impact!
+                  Start raising money and expanding your impact today!
                 </p>
               </div>
               <div className="flex flex-col items-center md:items-start md:flex-row lg:ml-auto">
-                <button value={'nonprofit'} onClick={this.openModal} className="transition duration-150 ease-in-out mb-8 md:mb-0 md:mr-6 inline-flex text-white bg-gray-600 border-0 py-3 px-6 focus:outline-none hover:bg-gray-500 rounded text-lg">I'm a nonprofit</button>
-                <button value={'forprofit'} onClick={this.openModal} className="transition duration-150 ease-in-out inline-flex text-gray-700 bg-gray-100 border-0 py-3 px-6 focus:outline-none hover:bg-gray-500 hover:text-white rounded text-lg">I'm a for-profit</button>
+                <button className="transition duration-150 ease-in-out mb-8 md:mb-0 md:mr-6 inline-flex text-white bg-gray-600 border-0 py-3 px-6 focus:outline-none hover:bg-gray-500 rounded text-lg">Get started</button>
+                <button className="transition duration-150 ease-in-out inline-flex text-gray-700 bg-gray-100 border-0 py-3 px-6 focus:outline-none hover:bg-gray-500 hover:text-white rounded text-lg">Learn more</button>
               </div>
             </div>
           </section>
-        </div>
-        <div className={'modal ' + this.state.nonprofitModal}>
-          <button className="close" value={'nonprofit'} onClick={this.closeModal}>&times;</button>
-          <div className="center text-center launch-form">
-            <iframe title="nonprofit-form" className="launch-form" loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLScU7b4drHN-CJW3ksXxARAxbL99Ikhcn0lGaKlTRMWJTtc3QQ/viewform?embedded=true" width="100%" height="987" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
-          </div>
-        </div>
-        <div className={'modal ' + this.state.forprofitModal}>
-          <button className="close" value={'forprofit'} onClick={this.closeModal}>&times;</button>
-          <div className="center text-center launch-form">
-            <iframe title="forprofit-form" className="launch-form" loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSe_DhMmWeb1lBC5WmBwYVWRu801YtJ-wF2X4wysZzlujv_N2Q/viewform?embedded=true" width="100%" height="987" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
-          </div>
         </div>
       </>
     )
