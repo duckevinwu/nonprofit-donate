@@ -1,6 +1,12 @@
 import React from 'react';
 import '../style/LandingPage.css';
 
+// import svgs
+import list from '../assets/list.svg';
+import pick from '../assets/pick.svg';
+import share from '../assets/share.svg';
+import pay from '../assets/pay.svg';
+
 export default class CycleSelect extends React.Component {
   constructor(props) {
     super(props);
@@ -118,11 +124,17 @@ export default class CycleSelect extends React.Component {
         <div className="w-3/5 flex justify-center items-center">
           <div className="circle relative flex justify-center items-center">
             <div className={"transition duration-300 ease-in-out absolute " + this.state.display1}>
-              <img src="/assets/hero.svg"></img>
+              <img src={list} alt="list"></img>
             </div>
-            <div className={"absolute " + this.state.display2}>Goodbye</div>
-            <div className={"absolute " + this.state.display3}>There</div>
-            <div className={"absolute " + this.state.display4}>Fourth</div>
+            <div className={"transition duration-300 ease-in-out absolute " + this.state.display2}>
+              <img src={pick} alt="pick"></img>
+            </div>
+            <div className={"transition duration-300 ease-in-out absolute " + this.state.display3}>
+              <img src={share} alt="share"></img>
+            </div>
+            <div className={"transition duration-300 ease-in-out absolute " + this.state.display4}>
+              <img src={pay} alt="pay"></img>
+            </div>
           </div>
         </div>
       </div>

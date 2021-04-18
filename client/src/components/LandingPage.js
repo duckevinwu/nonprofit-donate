@@ -1,6 +1,5 @@
 import React from 'react';
 import '../style/LandingPage.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import CycleSelect from './CycleSelect';
 
 // import svgs
@@ -26,7 +25,7 @@ export default class LandingPage extends React.Component {
                 <img className="h-8 w-8 lg:h-16 lg:w-16" alt="logo" src="https://i.ibb.co/BC0YYDZ/benefact-logo.png"></img>
                 <div className="questrial text-lg lg:text-xl font-bold tracking-wider">Benefact</div>
               </div>
-              <div className="ml-auto">Menu</div>
+              <div className="ml-auto hidden">Menu</div>
             </div>
             <div className="hero-info-container flex items-center justify-center">
               <div className="flex flex-col items-center lg:flex-row">
@@ -93,7 +92,7 @@ export default class LandingPage extends React.Component {
             <div className="lg:hidden flex flex-col">
               <div className="pb-12">
                 <div className="bg-green-50 h-28 w-28 rounded-full flex justify-center items-center">
-                  <img className="w-28 h-28" src="/assets/hero.svg"></img>
+                  <img className="w-28 h-28" src={list} alt="list"></img>
                 </div>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">View nonprofits</h3>
@@ -102,7 +101,7 @@ export default class LandingPage extends React.Component {
               </div>
               <div className="pb-12">
                 <div className="bg-green-50 h-28 w-28 rounded-full flex justify-center items-center">
-                  <img className="w-28 h-28" src="/assets/hero.svg"></img>
+                  <img className="w-28 h-28" src={pick} alt="pick"></img>
                 </div>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Pick your favorite</h3>
@@ -111,7 +110,7 @@ export default class LandingPage extends React.Component {
               </div>
               <div className="pb-12">
                 <div className="bg-green-50 h-28 w-28 rounded-full flex justify-center items-center">
-                  <img className="w-28 h-28" src="/assets/hero.svg"></img>
+                  <img className="w-28 h-28" src={share} alt="share"></img>
                 </div>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Begin fundraising</h3>
@@ -120,7 +119,7 @@ export default class LandingPage extends React.Component {
               </div>
               <div className="pb-12">
                 <div className="bg-green-50 h-28 w-28 rounded-full flex justify-center items-center">
-                  <img className="w-28 h-28" src="/assets/hero.svg"></img>
+                  <img className="w-28 h-28" src={pay} alt="pay"></img>
                 </div>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Get paid</h3>
@@ -139,21 +138,21 @@ export default class LandingPage extends React.Component {
             <h2 className="questrial text-3xl mt-6 mb-12 font-bold">Raise money effortlessly.</h2>
             <div className="flex flex-col lg:flex-row">
               <div className="pb-12 lg:w-1/3 lg:pr-4">
-                <img className="w-28 h-28" src="/assets/hero.svg"></img>
+                <img className="w-28 h-28" src={work} alt="work"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">We handle everything</h3>
                   <p className="mt-2 text-gray-600">We will create your online campaign, pay your fundraisers, and deliver your donations straight to your bank account</p>
                 </div>
               </div>
               <div className="pb-12 lg:w-1/3 lg:pr-4">
-                <img className="w-28 h-28" src="/assets/hero.svg"></img>
+                <img className="w-28 h-28" src={free} alt="free"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Zero risk</h3>
                   <p className="mt-2 text-gray-600">We only get paid if you raise money. So if you don’t raise money through our platform, then you won’t pay us a dime</p>
                 </div>
               </div>
               <div className="pb-12 lg:w-1/3">
-                <img className="w-28 h-28" src="/assets/hero.svg"></img>
+                <img className="w-28 h-28" src={community} alt="community"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Engage the community</h3>
                   <p className="mt-2 text-gray-600">Engage anyone (students, teachers, churches, companies, etc.) to fundraise for your nonprofit. P2P fundraising is all about community members coming together for a mutual cause</p>
@@ -171,11 +170,11 @@ export default class LandingPage extends React.Component {
               <div className="md:w-1/2 text-white text-center questrial text-4xl font-bold mb-8 md:mb-0">Ready to get started?</div>
               <div className="md:w-1/2 flex flex-col items-center">
                 <div className="w-60 flex items-center transition duration-300 ease-in-out text-black bg-white border border-white py-3 px-6 focus:outline-none rounded hover:bg-green-300 hover:border-green-300 cursor-pointer">
-                  <a>Support a nonprofit</a>
+                  <p>Support a nonprofit</p>
                   <i className="fas fa-chevron-right ml-auto"></i>
                 </div>
                 <div className="mt-6 w-60 flex items-center transition duration-300 ease-in-out text-white bg-black border border border-white py-3 px-6 focus:outline-none rounded hover:border-green-300 hover:text-green-300 cursor-pointer">
-                  <a>Become our partner</a>
+                  <p>Become our partner</p>
                   <i className="fas fa-chevron-right ml-auto"></i>
                 </div>
               </div>
