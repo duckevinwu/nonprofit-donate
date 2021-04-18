@@ -23,7 +23,14 @@ export default class App extends React.Component {
 							exact
 							path="/"
 							render={() => (
-								<LandingPage />
+								<div></div>
+							)}
+						/>
+						<Route
+							exact
+							path="/temp"
+							render={() => (
+								LandingPage
 							)}
 						/>
 						<Route
