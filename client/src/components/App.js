@@ -10,7 +10,9 @@ import SignUp from './SignUp';
 import Login from './Login';
 import Profile from './Profile';
 import ReturnFromEmail from './ReturnFromEmail';
-import TestCampaign from './TestCampaign';
+
+// campaigns
+import DemoCampaign from './campaigns/DemoCampaign.js';
 
 export default class App extends React.Component {
 
@@ -63,9 +65,9 @@ export default class App extends React.Component {
 						/>
 						<Route
 							exact
-							path="/test"
+							path="/demo"
 							render={() => (
-								<TestCampaign />
+								<DemoCampaign />
 							)}
 						/>
 					</Switch>

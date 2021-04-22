@@ -35,7 +35,7 @@ export default class LandingPage extends React.Component {
                     <p className="sm:text-lg leading-relaxed mb-6 text-gray-800">
                       Benefact enables anyone to raise money for nonprofits and get paid.
                     </p>
-                    <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Get started <i className="fas fa-chevron-right ml-6"></i></button>
+                    <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Get started <i className="bi-chevron-right ml-6"></i></button>
                   </div>
                 </div>
                 <div className="flex items-center justify-center lg:w-1/2">
@@ -57,7 +57,7 @@ export default class LandingPage extends React.Component {
                     Nonprofits are doing crucial work for society, but they are underfunded.
                   </p>
                   <p className="text-gray-300 border-l-4 border-gray-300 pl-2 mt-6">
-                    People want to help nonprofits fundraise, but there’s no economic incentive that values the time and effort that goes into peer-to-peer fundraising.
+                    People want to help nonprofits fundraise, but there’s no economic incentive that values the time and effort that goes into fundraising.
                   </p>
                 </div>
               </div>
@@ -86,9 +86,9 @@ export default class LandingPage extends React.Component {
         <div className="divider-section-reverse md:block hidden"></div>
         <section className="mb-12">
           <div className="container mx-auto px-3 pt-12 lg:px-5">
-            <h3 className="questrial uppercase text-gray-600 tracking-widest">For supporters</h3>
+            <h3 className="questrial uppercase text-gray-600 tracking-widest">For anyone</h3>
             <h2 className="questrial text-3xl mt-6 mb-12 font-bold">Support amazing nonprofits and earn money.</h2>
-            <CycleSelect className="hidden lg:flex mb-16"/>
+            <CycleSelect className="hidden lg:flex"/>
             <div className="lg:hidden flex flex-col">
               <div className="pb-12">
                 <div className="bg-green-50 h-28 w-28 rounded-full flex justify-center items-center">
@@ -123,13 +123,13 @@ export default class LandingPage extends React.Component {
                 </div>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Get paid</h3>
-                  <p className="mt-2 text-gray-600">At the end of the fundraising campaign, you’ll get a cut of the amount that you fundraised</p>
+                  <p className="mt-2 text-gray-600">At the end of the fundraising campaign, Benefact will pay you based on the total amount that you fundraised</p>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
-              <button className="transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View nonprofits <i className="fas fa-chevron-right ml-6"></i></button>
-            </div>
+          </div>
+          <div className="flex justify-center lg:mt-12">
+            <button className="transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View nonprofits <i className="bi-chevron-right ml-6"></i></button>
           </div>
         </section>
         <section className="bg-green-50 pt-12">
@@ -155,13 +155,13 @@ export default class LandingPage extends React.Component {
                 <img className="w-28 h-28" src={community} alt="community"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Engage the community</h3>
-                  <p className="mt-2 text-gray-600">Engage anyone (students, teachers, churches, companies, etc.) to fundraise for your nonprofit. P2P fundraising is all about community members coming together for a mutual cause</p>
+                  <p className="mt-2 text-gray-600">Engage anyone (students, teachers, churches, companies, etc.) to fundraise for your nonprofit. Peer-to-peer fundraising is all about community members coming together for a mutual cause</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex justify-center pb-12">
-            <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-gray-700 cursor-pointer">Partner with us <i className="fas fa-chevron-right ml-6"></i></button>
+            <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-gray-700 cursor-pointer">Partner with us <i className="bi-chevron-right ml-6"></i></button>
           </div>
         </section>
         <section className="bg-black">
@@ -171,11 +171,11 @@ export default class LandingPage extends React.Component {
               <div className="md:w-1/2 flex flex-col items-center">
                 <div className="w-60 flex items-center transition duration-300 ease-in-out text-black bg-white border border-white py-3 px-6 focus:outline-none rounded hover:bg-green-300 hover:border-green-300 cursor-pointer">
                   <p>Support a nonprofit</p>
-                  <i className="fas fa-chevron-right ml-auto"></i>
+                  <i className="bi-chevron-right ml-auto"></i>
                 </div>
                 <div className="mt-6 w-60 flex items-center transition duration-300 ease-in-out text-white bg-black border border border-white py-3 px-6 focus:outline-none rounded hover:border-green-300 hover:text-green-300 cursor-pointer">
                   <p>Become our partner</p>
-                  <i className="fas fa-chevron-right ml-auto"></i>
+                  <i className="bi-chevron-right ml-auto"></i>
                 </div>
               </div>
             </div>

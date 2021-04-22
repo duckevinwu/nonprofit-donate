@@ -21,21 +21,18 @@ class NonprofitCard extends React.Component {
   render() {
 
     return (
-      <div className="w-full nonprofit-card relative">
-        <div className="absolute w-full card-front">
+      <div className="grid nonprofit-card">
+        <div className="layer card-front">
           <LazyLoadImage
             alt={"challenge-cover"}
             src={'https://i.ibb.co/8MX9c0p/eprize-card.png'}
             effect="blur"
-            className="nonprofit-image"
-            wrapperProps={{
-              style: {
-                position: 'relative',
-                height: '100%'
-              }
-            }}
+            className="w-full h-full object-cover"
+            wrapperClassName="w-full h-full"
           />
         </div>
+        <div className="layer card-back">hello</div>
+        <div className="pseudo"></div>
       </div>
     )
   }

@@ -74,10 +74,16 @@
   cursor: pointer;
 }
 
-.circle {
-  min-width: 400px;
-  min-height: 400px;
-  max-width: 600px;
-  max-height: 600px;
+.layer-image {
+  grid-column: 1;
+  grid-row: 1;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-image {
   width: 80%;
+  max-height: 500px;
 }
