@@ -6,10 +6,17 @@ export default class DemoCampaign extends React.Component {
   constructor(props) {
     super(props);
 
+    const videoEmbed = (
+      <div className="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/SmEW3C7tkLc" title="Cover video" frameBorder="0" load="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+    )
+
     this.state = {
       coverImageUrl: 'https://givebutter.s3.amazonaws.com/media/DjjZmr1GGQaqXi4m2bBzngYNH3RycWev4Qa6ZNsF.jpg',
       logoImageUrl: '',
-      hidden: 'hidden'
+      hidden: 'hidden',
+      coverVideo: videoEmbed
     }
 
     this.stickyNav = React.createRef();
@@ -64,14 +71,8 @@ export default class DemoCampaign extends React.Component {
           <div className="container mx-auto px-3 py-8 lg:py-12 lg:px-5">
             <div className="lg:hidden">
               <div className="flex flex-col">
-                <LazyLoadImage
-                  alt={"challenge-cover"}
-                  src={this.state.coverImageUrl}
-                  effect="blur"
-                  className="details-cover-image"
-                  wrapperClassName="details-cover-image"
-                />
-                <div className="text-3xl questrial font-bold mt-6 tracking-wide">Let's free food</div>
+                {this.state.coverVideo}
+                <div className="text-4xl sm:text-5xl questrial font-bold mt-8 tracking-wide">Let's free food</div>
                 <div className="mt-2">
                   Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia. We are striving to hit 3 million pounds of food donated by November of 2021, and we can’t do it without your support!
                 </div>
@@ -106,7 +107,7 @@ export default class DemoCampaign extends React.Component {
                       </div>
                     </div>
                     <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
-                    <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">Donate</button>
+                    <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View this campaign</button>
                   </div>
                 </div>
               </div>
@@ -115,8 +116,8 @@ export default class DemoCampaign extends React.Component {
               <div className="flex flex-col">
                 <div className="flex items-center">
                   <div className="flex flex-col w-3/4 mr-6">
-                    <div className="border-l-6 border-black pl-4 text-4xl questrial font-bold mt-6 tracking-wide">Let's free food</div>
-                    <div className="mt-2">
+                    <div className="text-6xl questrial font-bold tracking-wide">Let's free food</div>
+                    <div className="mt-4">
                       Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia. We are striving to hit 3 million pounds of food donated by November of 2021, and we can’t do it without your support!
                     </div>
                   </div>
@@ -133,13 +134,7 @@ export default class DemoCampaign extends React.Component {
                 </div>
                 <div className="flex mt-12">
                   <div className="w-2/3 mr-6">
-                    <LazyLoadImage
-                      alt={"challenge-cover"}
-                      src={this.state.coverImageUrl}
-                      effect="blur"
-                      className="details-cover-image"
-                      wrapperClassName="details-cover-image"
-                    />
+                    {this.state.coverVideo}
                   </div>
                   <div className="w-1/3">
                     <div className="flex flex-col">
@@ -162,7 +157,7 @@ export default class DemoCampaign extends React.Component {
                         </div>
                       </div>
                       <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
-                      <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">Donate</button>
+                      <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">View this campaign</button>
                     </div>
                   </div>
                 </div>
@@ -182,9 +177,8 @@ export default class DemoCampaign extends React.Component {
           <div className="sticky navbar flex" ref={this.stickyNav}>
             <div className="nav-tabs container mx-auto px-3 lg:px-5 flex items-center">
               <label htmlFor="tab1" id="tab1-label" onClick={this.handleTabChange} className="tab1-icon">Story</label>
-              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">Tab Two</label>
-              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Tab Three</label>
-              <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Tab Four</label>
+              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">Get Started</label>
+              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Community</label>
               <div className={`ml-auto hidden md:flex md:${this.state.hidden}`}>
                 <button className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
               </div>
@@ -199,9 +193,6 @@ export default class DemoCampaign extends React.Component {
             </section>
             <section id="tab3" className="tab-panel min-h-100vh">
               <div className="container mx-auto px-3 lg:px-5">tab 3</div>
-            </section>
-            <section id="tab4" className="tab-panel min-h-100vh">
-              <div className="container mx-auto px-3 lg:px-5">tab 4</div>
             </section>
           </div>
           <div className={`${this.state.hidden} fixed bottom-4 z-0 flex w-full justify-center md:hidden`}>
