@@ -19,7 +19,6 @@ class NonprofitCard extends React.Component {
   }
 
   render() {
-
     return (
       <div className="grid nonprofit-card">
         <div className="layer card-front">

@@ -1,0 +1,145 @@
+.nonprofit-logo {
+  max-height: 64px;
+  width: auto;
+}
+
+.details-cover-image {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  min-height: 200px;
+  object-fit: cover;
+}
+
+.border-l-6 {
+  border-left-width: 6px;
+}
+
+.nav-advocate-button {
+  font-size: 16px;
+}
+
+/* tabs */
+.sticky {
+ position: -webkit-sticky; /* Safari */
+ position: sticky;
+ top: 0;
+ z-index: 10;
+}
+
+.navbar {
+  border-bottom: 2px solid #e2e8f0;
+  border-top: 2px solid #e2e8f0;
+}
+
+/*
+CSS for the main interaction
+*/
+.tabset {
+ width: 100%;
+}
+
+.tabset > input[type="radio"] {
+ display: none;
+}
+
+.tabset .tab-panel {
+ display: none;
+}
+
+.tabset > input:nth-child(1):checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(2):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(4):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(6):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+ display: block;
+}
+
+/*
+Styling
+*/
+
+.nav-tabs > label {
+ font-size: 16px;
+ color: #718096;
+ position: relative;
+ height: 100%;
+ padding: 15px 0 15px 0;
+ margin-right: 3rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid transparent;
+ border-bottom: 0;
+ cursor: pointer;
+ font-weight: 600;
+}
+
+.tab-panels {
+}
+
+.tab-panel {
+ font-size: 16px;
+}
+
+.nav-tabs {
+ width: 100%;
+ background-color: white;
+ font-size: 0px;
+}
+
+#tab1:checked ~ .sticky > .nav-tabs > #tab1-label,
+#tab2:checked ~ .sticky > .nav-tabs > #tab2-label,
+#tab3:checked ~ .sticky > .nav-tabs > #tab3-label,
+#tab4:checked ~ .sticky > .nav-tabs > #tab4-label,
+#tab5:checked ~ .sticky > .nav-tabs > #tab5-label,
+#tab6:checked ~ .sticky > .nav-tabs > #tab6-label
+{
+ color: rgba(5, 150, 105, 1);
+ /* background-color: rgba(236, 253, 245, 1); */
+ border-bottom: 2px solid rgba(5, 150, 105, 1);
+ margin-bottom: -1px;
+}
+
+.nav-tabs > label:hover {
+ color: rgba(5, 150, 105, 1);
+ /* background-color: rgba(236, 253, 245, 1); */
+}
+
+@media only screen and (max-width: 640px) {
+  .tab1-icon,
+  .tab2-icon,
+  .tab3-icon,
+  .tab4-icon
+  {
+    font-size: 0px !important;
+    width: 25%;
+  }
+
+  .tab1-icon::after {
+    content: "\f015";
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+  }
+
+  .tab2-icon::after {
+    content: "\f5ae";
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+  }
+
+  .tab3-icon::after {
+    content: "\f46d";
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+  }
+
+  .tab4-icon::after {
+    content: "\f46c";
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+  }
+}
+
+/* end tabs */
