@@ -1,6 +1,7 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '../../style/Campaign.css';
+import '../../style/Tooltip.css';
 
 export default class DemoCampaign extends React.Component {
   constructor(props) {
@@ -99,7 +100,12 @@ export default class DemoCampaign extends React.Component {
                       </div>
                       <div className="w-1/3 px-2 flex flex-col">
                         <div className="text-lg font-semibold">24</div>
-                        <div className="text-xs text-gray-700">advocates</div>
+                        <div className="text-xs text-gray-700 flex">
+                          <div className="mr-1">advocates</div>
+                          <div data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
+                            <i className="bi-info-circle"></i>
+                          </div>
+                        </div>
                       </div>
                       <div className="w-1/3 flex flex-col">
                         <div className="text-lg font-semibold">57</div>
@@ -149,7 +155,12 @@ export default class DemoCampaign extends React.Component {
                         </div>
                         <div className="flex flex-col mt-6">
                           <div className="text-3xl font-semibold text-gray-800">24</div>
-                          <div className="text-sm text-gray-700">advocates</div>
+                          <div className="text-sm text-gray-700 flex">
+                            <div className="mr-1">advocates</div>
+                            <div data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
+                              <i className="bi-info-circle"></i>
+                            </div>
+                          </div>
                         </div>
                         <div className="flex flex-col mt-6">
                           <div className="text-3xl font-semibold text-gray-800">57</div>
