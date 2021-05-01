@@ -1,5 +1,6 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import OnlineResources from '../OnlineResources.js';
 import '../../style/Campaign.css';
 import '../../style/Tooltip.css';
 
@@ -28,9 +29,10 @@ export default class DemoCampaign extends React.Component {
 
   handleStickyScroll() {
     const stickyNavY = this.stickyNav.current.offsetTop;
-    const windowY = window.scrollY;
+    const windowY = window.pageYOffset;
+    console.log(`${stickyNavY} ${windowY}`)
 
-    if (windowY === stickyNavY) {
+    if (windowY >= stickyNavY - 10) {
       if (this.state.hidden === 'hidden') {
         this.setState({
           hidden: ''
@@ -48,6 +50,13 @@ export default class DemoCampaign extends React.Component {
   handleTabChange() {
     let tabTop = this.tabPanels.current.offsetTop;
     let navHeight = this.stickyNav.current.offsetHeight;
+
+    const supportsNativeSmoothScroll = 'scrollBehavior' in document.documentElement.style;
+
+    if (!supportsNativeSmoothScroll) {
+      window.scrollTo(0, tabTop - navHeight);
+      return;
+    }
 
     window.scrollTo({
       top: tabTop - navHeight,
@@ -89,27 +98,27 @@ export default class DemoCampaign extends React.Component {
                     </div>
                   </div>
                   <div className="flex flex-col md:w-1/2 md:justify-center">
-                    <div className="grid w-full h-2">
-                      <div className="layer bg-gray-200 w-full h-2"></div>
-                      <div className="layer bg-green-400" style={{ width: "40%" }}></div>
+                    <div className="w-full h-6">
+                      <div className="border-t-2 border-r-2 h-full ml-auto"></div>
                     </div>
-                    <div className="flex mt-2 mb-6">
+                    <div className="flex mb-6">
                       <div className="w-1/3 flex flex-col">
                         <div className="text-lg font-semibold text-green-400 truncate">$4,000</div>
-                        <div className="text-xs text-gray-700">raised of $10,000 goal</div>
+                        <div className="text-xs text-gray-700">raised in total</div>
                       </div>
                       <div className="w-1/3 px-2 flex flex-col">
-                        <div className="text-lg font-semibold">24</div>
+                        <div className="text-lg font-semibold text-gray-800">24</div>
                         <div className="text-xs text-gray-700 flex">
-                          <div className="mr-1">advocates</div>
-                          <div data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
-                            <i className="bi-info-circle"></i>
+                          <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
+                            advocates
                           </div>
                         </div>
                       </div>
                       <div className="w-1/3 flex flex-col">
-                        <div className="text-lg font-semibold">57</div>
-                        <div className="text-xs text-gray-700">days to go</div>
+                        <div className="text-lg font-semibold text-gray-800">5%</div>
+                        <div className="text-xs text-gray-700 flex">
+                          <div className="border-b border-gray-400 border-dotted" data-tooltip="Benefact will pay you 5% of the total amount you fundraise">share</div>
+                        </div>
                       </div>
                     </div>
                     <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
@@ -144,27 +153,27 @@ export default class DemoCampaign extends React.Component {
                   </div>
                   <div className="w-1/3">
                     <div className="flex flex-col">
-                      <div className="grid w-full h-2">
-                        <div className="layer bg-gray-200 w-full h-2"></div>
-                        <div className="layer bg-green-400" style={{ width: "40%" }}></div>
+                      <div className="w-full h-6">
+                        <div className="border-t-2 border-r-2 h-full ml-auto"></div>
                       </div>
-                      <div className="flex flex-col mt-4">
+                      <div className="flex flex-col">
                         <div className="flex flex-col">
                           <div className="text-3xl font-semibold text-green-400">$4,000</div>
-                          <div className="text-sm text-gray-700">raised of $10,000 goal</div>
+                          <div className="text-sm text-gray-700">raised in total</div>
                         </div>
                         <div className="flex flex-col mt-6">
                           <div className="text-3xl font-semibold text-gray-800">24</div>
                           <div className="text-sm text-gray-700 flex">
-                            <div className="mr-1">advocates</div>
-                            <div data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
-                              <i className="bi-info-circle"></i>
+                            <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
+                              advocates
                             </div>
                           </div>
                         </div>
                         <div className="flex flex-col mt-6">
-                          <div className="text-3xl font-semibold text-gray-800">57</div>
-                          <div className="text-sm text-gray-700">days to go</div>
+                          <div className="text-3xl font-semibold text-gray-800">5%</div>
+                          <div className="text-sm text-gray-700 flex">
+                            <div className="border-b border-gray-400 border-dotted" data-tooltip="Benefact will pay you 5% of the total amount you fundraise">share</div>
+                          </div>
                         </div>
                       </div>
                       <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
@@ -178,19 +187,20 @@ export default class DemoCampaign extends React.Component {
         </section>
 
         <div className="tabset">
-          <input type="radio" name="tabset" id="tab1" aria-controls="tab1" defaultChecked/>
+          <input type="radio" name="tabset" id="tab1" aria-controls="tab1"/>
           <input type="radio" name="tabset" id="tab2" aria-controls="tab2"/>
-          <input type="radio" name="tabset" id="tab3" aria-controls="tab3"/>
+          <input type="radio" name="tabset" id="tab3" aria-controls="tab3" defaultChecked/>
           <input type="radio" name="tabset" id="tab4" aria-controls="tab4"/>
           <input type="radio" name="tabset" id="tab5" aria-controls="tab5"/>
           <input type="radio" name="tabset" id="tab6" aria-controls="tab6"/>
 
           <div className="sticky navbar flex" ref={this.stickyNav}>
             <div className="nav-tabs container mx-auto px-3 lg:px-5 flex items-center">
-              <label htmlFor="tab1" id="tab1-label" onClick={this.handleTabChange} className="tab1-icon">Story</label>
-              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">Get Started</label>
-              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Community</label>
-              <div className={`ml-auto hidden md:flex md:${this.state.hidden}`}>
+              <label htmlFor="tab1" id="tab1-label" onClick={this.handleTabChange} className="tab1-icon">Mission</label>
+              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">Timeline</label>
+              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Fundraising Resources</label>
+              <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Community</label>
+              <div className={`ml-auto hidden lg:flex lg:${this.state.hidden}`}>
                 <button className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
               </div>
             </div>
@@ -203,11 +213,16 @@ export default class DemoCampaign extends React.Component {
               <div className="container mx-auto px-3 lg:px-5">tab 2</div>
             </section>
             <section id="tab3" className="tab-panel min-h-100vh">
-              <div className="container mx-auto px-3 lg:px-5">tab 3</div>
+              <div className="container mx-auto px-3 lg:px-5 py-12">
+                <OnlineResources />
+              </div>
+            </section>
+            <section id="tab4" className="tab-panel min-h-100vh">
+              <div className="container mx-auto px-3 lg:px-5">tab 4</div>
             </section>
           </div>
-          <div className={`${this.state.hidden} fixed bottom-4 z-0 flex w-full justify-center md:hidden`}>
-            <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+          <div className={`${this.state.hidden} fixed bottom-4 z-10 flex w-full justify-center sm:hidden`}>
+            <button className="shadow-lg transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
           </div>
         </div>
       </>

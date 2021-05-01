@@ -31,9 +31,9 @@ export default class LandingPage extends React.Component {
               <div className="flex flex-col items-center lg:flex-row">
                 <div className="text-center lg:text-left lg:mr-10 mb-16 lg:mb-0 flex items-center lg:w-1/2">
                   <div>
-                    <h1 className="text-4xl md:text-5xl questrial mb-6 font-bold">A new way to <font className="text-green-400 questrial">give back</font></h1>
+                    <h1 className="text-4xl md:text-5xl questrial mb-6 font-bold">Get paid to <font className="text-green-400 questrial">help nonprofits</font></h1>
                     <p className="sm:text-lg leading-relaxed mb-6 text-gray-800">
-                      Benefact enables anyone to raise money for nonprofits and get paid.
+                      Benefact is where anyone can get paid to raise money for nonprofits.
                     </p>
                     <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Get started <i className="bi-chevron-right ml-6"></i></button>
                   </div>
