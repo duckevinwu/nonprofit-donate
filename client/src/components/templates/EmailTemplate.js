@@ -53,24 +53,23 @@ export default class EmailTemplate extends React.Component {
             </div>
           </div>
           <div className="p-2 scroll-div lg:h-80 lg:overflow-y-auto text-sm default-font" ref={this.emailBody}>
-            <p>Dear [insert name],</p>
+            <p>Hey John,</p>
             <div className="mt-3"></div>
-            <p>You might have heard that I&rsquo;m fundraising to [insert reason why you&rsquo;re fundraising]. This cause is very important to me because [supply a personal reason that appeals to the reader&rsquo;s emotions].</p>
+            <p>Long time no see — hope school has been going well in New York!</p>
             <div className="mt-3"></div>
-            <p>I&rsquo;m encouraged by the support I&rsquo;ve already received, but I still need help reaching my fundraising goal of [insert dollar amount].</p>
+            <p>I know this is a little out of the blue, but I’m running a fundraising campaign for Sharing Excess and I was wondering if you’d be willing to chip in?</p>
             <div className="mt-3"></div>
-            <p>Would you be willing to make a contribution to my fundraiser? A gift of any amount would mean the world to me.</p>
+            <p>Sharing Excess is a nonprofit that rescues wasted food in Philadelphia and donates it to those in need. They’ve rescued 2.2 million pounds of food to date, and your donation would help them reach 3 million pounds by the end of the year!</p>
             <div className="mt-3"></div>
-            <p>To donate, simply click the link to my fundraiser below:</p>
+            <p>Their mission means a bunch to me, as I’ve seen dozens of hungry families in Philly, and I figured that you might care enough to chip in as well. Every dollar donated equates to 8 meals for families in need.</p>
             <div className="mt-3"></div>
-            <p>[Insert link to fundraiser]</p>
+            <p>There’s also some unique perks if you donate — you could get your name on Sharing Excess’s website, a personalized note from the CEO, and more. Here’s the <font className="text-blue-500 underline default-font">link</font> to donate!</p>
             <div className="mt-3"></div>
-            <p>It would also mean a lot if you could share my fundraiser link on social media. The more exposure I get, the faster I will reach my fundraising goal.</p>
+            <p>Regardless of whether you donate or not, it’d be awesome if you could help me spread the word. Here’s a <font className="text-blue-500 underline default-font">Tweet</font> and <font className="text-blue-500 underline default-font">Facebook post</font> you can share. You can also tell your friends or family to donate via text by texting “D2SE” to (202) 858-1233.</p>
             <div className="mt-3"></div>
-            <p>I&rsquo;d love to talk to you in person about my fundraiser, so please don&rsquo;t hesitate to reach out.</p>
+            <p>If you have any questions, just hit me up! Thanks so much John, I really appreciate any support you can give. We should catch up next time you’re in town?</p>
             <div className="mt-3"></div>
-            <p>With love/Sincerely,</p>
-            <div className="mt-3"></div>
+            <p>Best,</p>
             <p>[Your name]</p>
           </div>
           <div className="p-2 flex items-center">

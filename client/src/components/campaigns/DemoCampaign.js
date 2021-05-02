@@ -1,6 +1,7 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import OnlineResources from '../OnlineResources.js';
+import OnlineResourcesSimple from '../OnlineResourcesSimple.js';
+import HowItWorks from '../HowItWorks.js';
 import '../../style/Campaign.css';
 import '../../style/Tooltip.css';
 
@@ -30,7 +31,6 @@ export default class DemoCampaign extends React.Component {
   handleStickyScroll() {
     const stickyNavY = this.stickyNav.current.offsetTop;
     const windowY = window.pageYOffset;
-    console.log(`${stickyNavY} ${windowY}`)
 
     if (windowY >= stickyNavY - 10) {
       if (this.state.hidden === 'hidden') {
@@ -197,7 +197,7 @@ export default class DemoCampaign extends React.Component {
           <div className="sticky navbar flex" ref={this.stickyNav}>
             <div className="nav-tabs container mx-auto px-3 lg:px-5 flex items-center">
               <label htmlFor="tab1" id="tab1-label" onClick={this.handleTabChange} className="tab1-icon">Mission</label>
-              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">Timeline</label>
+              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">How It Works</label>
               <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Fundraising Resources</label>
               <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Community</label>
               <div className={`ml-auto hidden lg:flex lg:${this.state.hidden}`}>
@@ -207,22 +207,68 @@ export default class DemoCampaign extends React.Component {
           </div>
           <div className="tab-panels" ref={this.tabPanels}>
             <section id="tab1" className="tab-panel min-h-100vh">
-              <div className="container mx-auto px-3 lg:px-5">tab 1</div>
+              <div className="container mx-auto px-3 lg:px-5">
+                <div className="flex justify-center">
+                  <div className="flex flex-col lg:w-1/2 md:w-3/4 w-full mt-20 mb-12">
+                    <h3 className="mb-8 questrial text-4xl font-bold">Get paid to help Sharing Excess raise money</h3>
+                    <LazyLoadImage
+                      alt={"se-cover"}
+                      src={'https://i.ibb.co/tYtZ8tQ/image1.png'}
+                      effect="blur"
+                      className=""
+                      wrapperClassName=""
+                    />
+                    <div className="mt-8 text-lg">
+                      <p className="">
+                        80 billion tons of food are wasted each year. Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia.
+                        As of early 2021, we have rescued and donated a total of 2.2 million pounds of food.
+                        We are striving to hit 3 million pounds by the end of the year, and we can’t do it without Advocates like you!
+                      </p>
+                      <p className="mt-6">
+                        By becoming an Advocate, you’ll get paid to fundraise for us.
+                        But this is so much more than another income stream for you — every dollar you raise amounts to 8 meals for families in need!
+                        You’ll be making a direct impact on the lives of families in Philadelphia while getting compensated for your time and effort — it’s a win-win.
+                      </p>
+                    </div>
+                    <LazyLoadImage
+                      alt={"se-banner"}
+                      src={'https://i.ibb.co/gTdzn9q/image5.png'}
+                      effect="blur"
+                      className=""
+                      wrapperClassName="my-8"
+                    />
+                    <div className="text-lg">
+                      <p className="">
+                        The best part? Anyone can become an Advocate — no experience needed.
+                        Our Advocates are students, teachers, community members, public servants, moms, dads — anyone who wants to make a difference.
+                        No matter who you are, we will teach you how to fundraise in ways that suit your personality and interests.
+                        Some Advocates will fundraise remotely (emails, social media posts, text messages), others will leverage special events (birthdays, weddings, holidays), and some may get really creative (“donate to Sharing Excess and I’ll bike across Pennsylvania!”).
+                        Whatever your style, we have a huge library of fundraising ideas and a lively community to support you.
+                      </p>
+                    </div>
+                    <div className="border-l-6 border-black pl-3 my-8">
+                      <h4 className="questrial font-bold text-3xl">
+                        If you want to reduce food insecurity and get paid to do so, become an Advocate today!
+                      </h4>
+                    </div>
+                    <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                  </div>
+                </div>
+              </div>
             </section>
             <section id="tab2" className="tab-panel min-h-100vh">
-              <div className="container mx-auto px-3 lg:px-5">tab 2</div>
+              <div className="container mx-auto px-3 lg:px-5 flex justify-center">
+                <HowItWorks className="w-full lg:w-3/4"/>
+              </div>
             </section>
             <section id="tab3" className="tab-panel min-h-100vh">
               <div className="container mx-auto px-3 lg:px-5 py-12">
-                <OnlineResources />
+                <OnlineResourcesSimple />
               </div>
             </section>
             <section id="tab4" className="tab-panel min-h-100vh">
               <div className="container mx-auto px-3 lg:px-5">tab 4</div>
             </section>
-          </div>
-          <div className={`${this.state.hidden} fixed bottom-4 z-10 flex w-full justify-center sm:hidden`}>
-            <button className="shadow-lg transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
           </div>
         </div>
       </>

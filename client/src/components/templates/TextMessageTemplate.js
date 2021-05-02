@@ -40,18 +40,15 @@ export default class TextMessageTemplate extends React.Component {
     return (
       <div className={`${this.props.className} w-5/6`}>
         <div className="flex flex-col">
-          <p className="text-message from-me">Hello</p>
-          <p className="text-message from-them">Who is this</p>
-          <p className="text-message from-me">Your old friend</p>
-          <p className="text-message from-them">Wow it's been a long time</p>
-          <div className="text-message from-me last">
-            <p className="scroll-div lg:h-48 lg:overflow-y-scroll" ref={this.textBody}>
-              Here is a long block of text that introduces the nonprofit and what it does.
-              After explaining this, ask the person to do donate and possibly share the message with as many people as they can to filler filler filler filler.
-              This is a third sentence to make this text pretty long so we can see how the scrolling capabilities works.
+          <div className="text-message from-me simple last">
+            <p className="scroll-div lg:h-80 lg:overflow-y-scroll" ref={this.textBody}>
+              Hey John! Long time no see, hope you’re doing well :)
+              I’m running an online fundraiser for Sharing Excess, a nonprofit that rescues wasted food in Philly, and I was wondering if you’d be willing to chip in?
+              Every dollar donated equals 8 meals to families in need, and we even have neat donation perks, such as a personalized note from the CEO.
+              If you’re interested, all you have to do is text “D2SE” to (202) 858-1233 or visit this link: <font className="underline">[insert your unique link]</font>.
             </p>
           </div>
-          <div className="text-message text-message-copy">
+          <div className="text-message text-message-copy simple">
             <div className="flex items-center">
               <i onClick={this.handleCopy} className="fas fa-copy text-2xl text-black my-2 hover:text-green-500 cursor-pointer transition"></i>
               <p className={`transition ${this.state.copy} ml-2 text-green-500`}>Text copied!</p>

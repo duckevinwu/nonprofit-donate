@@ -29,7 +29,7 @@
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56%;
   height: 0;
 }
 
@@ -52,6 +52,7 @@
 .navbar {
   border-bottom: 2px solid #e2e8f0;
   border-top: 2px solid #e2e8f0;
+  background-color: white;
 }
 
 /*
@@ -88,7 +89,7 @@ Styling
  position: relative;
  height: 100%;
  padding: 15px 0 15px 0;
- margin-right: 3rem;
+ margin-right: 2rem;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -258,6 +259,10 @@ Styling
   padding-top: 0;
 }
 
+.text-message-copy.simple {
+  align-self: center;
+}
+
 .text-message:before, .text-message:after {
   content: "";
 	position: absolute;
@@ -307,6 +312,10 @@ Styling
 
 .from-me.last {
   margin-bottom: 0;
+}
+
+.from-me.simple {
+  align-self: center;
 }
 
 @media only screen and (max-width: 1024px) {
