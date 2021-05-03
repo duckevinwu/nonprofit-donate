@@ -269,8 +269,8 @@ export default class DemoCampaign extends React.Component {
               </div>
             </section>
             <section id="tab4" className="tab-panel min-h-100vh">
-              <div className="container mx-auto px-3 lg:px-5">
-                <ContactForm className="my-12"/>
+              <div className="container mx-auto px-3 lg:px-5 py-12">
+                <ContactForm/>
               </div>
             </section>
           </div>
