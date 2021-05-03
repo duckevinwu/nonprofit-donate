@@ -1,9 +1,11 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import OnlineResourcesSimple from '../OnlineResourcesSimple.js';
-import HowItWorks from '../HowItWorks.js';
 import '../../style/Campaign.css';
 import '../../style/Tooltip.css';
+
+import OnlineResourcesSimple from '../OnlineResourcesSimple.js';
+import HowItWorks from '../HowItWorks.js';
+import ContactForm from '../ContactForm.js';
 
 export default class DemoCampaign extends React.Component {
   constructor(props) {
@@ -189,8 +191,8 @@ export default class DemoCampaign extends React.Component {
         <div className="tabset">
           <input type="radio" name="tabset" id="tab1" aria-controls="tab1"/>
           <input type="radio" name="tabset" id="tab2" aria-controls="tab2"/>
-          <input type="radio" name="tabset" id="tab3" aria-controls="tab3" defaultChecked/>
-          <input type="radio" name="tabset" id="tab4" aria-controls="tab4"/>
+          <input type="radio" name="tabset" id="tab3" aria-controls="tab3"/>
+          <input type="radio" name="tabset" id="tab4" aria-controls="tab4" defaultChecked/>
           <input type="radio" name="tabset" id="tab5" aria-controls="tab5"/>
           <input type="radio" name="tabset" id="tab6" aria-controls="tab6"/>
 
@@ -267,7 +269,9 @@ export default class DemoCampaign extends React.Component {
               </div>
             </section>
             <section id="tab4" className="tab-panel min-h-100vh">
-              <div className="container mx-auto px-3 lg:px-5">tab 4</div>
+              <div className="container mx-auto px-3 lg:px-5">
+                <ContactForm className="my-12"/>
+              </div>
             </section>
           </div>
         </div>

@@ -171,6 +171,11 @@ Styling
 
 /* end tabs */
 
+/* Contact Form */
+.contact-textarea {
+  resize: none;
+}
+
 /* OnlineResources */
 .or-text {
   opacity: 0.4;
@@ -328,8 +333,6 @@ Styling
     margin-top: 0px;
   }
 }
-
-
 
 @media only screen and (max-width: 640px) {
   .email-template {
