@@ -13,7 +13,7 @@ export default class OnlineResourcesSimple extends React.Component {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 lg:pr-4">
             <div className="flex items-center">
-              <i className="text-4xl text-green-500 font-bold bi-envelope mr-2"></i>
+              <i className="text-4xl text-green-500 font-bold bi-envelope mr-3"></i>
               <h2 className="text-4xl questrial font-bold">Email</h2>
             </div>
             <div className="mt-8">
@@ -54,7 +54,7 @@ export default class OnlineResourcesSimple extends React.Component {
         <div className="flex flex-col lg:flex-row items-center mt-36">
           <div className="w-full lg:w-1/2 lg:pr-4">
             <div className="flex items-center">
-              <i className="text-4xl text-green-500 font-bold bi-twitter mr-2"></i>
+              <i className="text-4xl text-green-500 font-bold bi-twitter mr-3"></i>
               <h2 className="text-4xl questrial font-bold">Social Media</h2>
             </div>
             <div className="mt-8">
@@ -109,7 +109,7 @@ export default class OnlineResourcesSimple extends React.Component {
         <div className="flex flex-col lg:flex-row items-center mt-36">
           <div className="w-full lg:w-1/2 lg:pr-4">
             <div className="flex items-center">
-              <i className="text-4xl text-green-500 font-bold bi-chat mr-2"></i>
+              <i className="text-4xl text-green-500 font-bold bi-chat mr-3"></i>
               <h2 className="text-4xl questrial font-bold">Text Message</h2>
             </div>
             <div className="mt-8">

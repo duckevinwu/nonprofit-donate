@@ -60,7 +60,7 @@ export default class ContactForm extends React.Component {
       <div className={`flex justify-center ${this.props.className}`}>
         <form className="w-full lg:w-10/12 py-4 sm:p-6 bg-green-50 rounded-lg shadow-md" onSubmit={this.sendMessage}>
           <div className="flex justify-center mb-6 sm:mb-12 p-3 text-center">
-            <h2 className="questrial text-5xl font-bold">Get in touch!</h2>
+            <h2 className="questrial text-4xl font-bold">Get in touch!</h2>
           </div>
           <div className="flex flex-col lg:flex-row">
             <div className="flex flex-col lg:w-2/5 p-3">

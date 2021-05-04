@@ -7,7 +7,10 @@ export default class OnlineResources extends React.Component {
       <div className={`grid grid-cols-1 py-20 ${this.props.className}`}>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-red-50 p-4 flex flex-col rounded-lg shadow-lg">
-            <div className="text-red-500 text-8xl font-bold questrial">1</div>
+            <div className="flex">
+              <div className="text-red-500 text-8xl font-bold questrial">1</div>
+              <i className="ml-auto bi-box-arrow-in-right text-4xl text-red-500"></i>
+            </div>
             <div className="mt-auto questrial text-2xl font-bold">Sign up to be an Advocate</div>
           </div>
           <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
@@ -17,7 +20,10 @@ export default class OnlineResources extends React.Component {
         </div>
         <div className="flex flex-col md:flex-row items-center mt-12">
           <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-yellow-50 p-4 flex flex-col rounded-lg shadow-lg">
-            <div className="text-yellow-500 text-8xl font-bold questrial">2</div>
+            <div className="flex">
+              <div className="text-yellow-500 text-8xl font-bold questrial">2</div>
+              <i className="ml-auto bi-envelope text-4xl text-yellow-500"></i>
+            </div>
             <div className="mt-auto questrial text-2xl font-bold">Receive your welcome email</div>
           </div>
           <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
@@ -26,7 +32,10 @@ export default class OnlineResources extends React.Component {
         </div>
         <div className="flex flex-col md:flex-row items-center mt-12">
           <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-blue-50 p-4 flex flex-col rounded-lg shadow-lg">
-            <div className="text-blue-500 text-8xl font-bold questrial">3</div>
+            <div className="flex">
+              <div className="text-blue-500 text-8xl font-bold questrial">3</div>
+              <i className="ml-auto bi-people text-4xl text-blue-500"></i>
+            </div>
             <div className="mt-auto questrial text-2xl font-bold">Launch your campaign</div>
           </div>
           <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
@@ -38,7 +47,10 @@ export default class OnlineResources extends React.Component {
         </div>
         <div className="flex flex-col md:flex-row items-center mt-12">
           <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-green-50 p-4 flex flex-col rounded-lg shadow-lg">
-            <div className="text-green-500 text-8xl font-bold questrial">4</div>
+            <div className="flex">
+              <div className="text-green-500 text-8xl font-bold questrial">4</div>
+              <i className="ml-auto bi-cash-stack text-4xl text-green-500"></i>
+            </div>
             <div className="mt-auto questrial text-2xl font-bold">Get paid</div>
           </div>
           <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">

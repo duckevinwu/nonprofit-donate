@@ -212,7 +212,7 @@ export default class DemoCampaign extends React.Component {
               <div className="container mx-auto px-3 lg:px-5">
                 <div className="flex justify-center">
                   <div className="flex flex-col lg:w-1/2 md:w-3/4 w-full mt-20 mb-12">
-                    <h3 className="mb-8 questrial text-4xl font-bold">Get paid to help Sharing Excess raise money</h3>
+                    <h3 className="mb-8 questrial text-5xl tracking-wide font-bold">Get paid to <font className="text-green-500 questrial">Free the Food</font> with Sharing Excess</h3>
                     <LazyLoadImage
                       alt={"se-cover"}
                       src={'https://i.ibb.co/tYtZ8tQ/image1.png'}
@@ -253,7 +253,9 @@ export default class DemoCampaign extends React.Component {
                         If you want to reduce food insecurity and get paid to do so, become an Advocate today!
                       </h4>
                     </div>
-                    <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                    <div className="flex justify-center">
+                      <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -270,6 +272,26 @@ export default class DemoCampaign extends React.Component {
             </section>
             <section id="tab4" className="tab-panel min-h-100vh">
               <div className="container mx-auto px-3 lg:px-5 py-12">
+                <div className="flex justify-center mb-12">
+                  <div className="flex flex-col w-full lg:w-10/12">
+                    <h2 className="questrial font-bold text-5xl mb-4">Our commmunity is here to support you</h2>
+                    <p className="">
+                      We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat to connect with other Advocates or ask any questions to the Benefact/Sharing Excess team below!
+                      We also host an (optional) kickoff session for all of our fundraisers to attend.
+                      The kickoff session will get you acquainted with how our campaigns work and give you a chance to ask any questions to us directly.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center my-12">
+                      <div className="mb-6 sm:mb-0 sm:mr-6 w-full h-30 bg-black p-4 rounded-lg shadow-md hover:bg-green-500 transition duration-150 cursor-pointer flex flex-col items-center">
+                        <i className="text-white bi-discord text-4xl mb-3"></i>
+                        <p className="text-center text-white text-xl questrial">Join our Discord</p>
+                      </div>
+                      <div className="w-full h-30 bg-black p-4 rounded-lg shadow-md hover:bg-green-500 transition duration-150 cursor-pointer flex flex-col items-center">
+                        <i className="text-white bi-camera-video text-4xl mb-3"></i>
+                        <p className="text-center text-white text-xl questrial">Register for Kickoff Session</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <ContactForm/>
               </div>
             </section>
