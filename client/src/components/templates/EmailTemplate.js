@@ -37,7 +37,7 @@ export default class EmailTemplate extends React.Component {
 
   render() {
     return (
-      <div className={`${this.props.className} border shadow-lg email-template`}>
+      <div className={`${this.props.className} border shadow-lg email-template bg-white`}>
         <div className="flex flex-col">
           <div className="bg-gray-500 flex p-2">
             <div className="text-white font-bold">Subject</div>
@@ -73,7 +73,7 @@ export default class EmailTemplate extends React.Component {
             <p>[Your name]</p>
           </div>
           <div className="p-2 flex items-center">
-            <i onClick={this.handleCopy} className="fas fa-copy text-2xl text-black my-2 hover:text-green-500 cursor-pointer transition"></i>
+            <i onClick={this.handleCopy} className="bi-files text-2xl shadow text-green-500 p-2 bg-green-50 rounded my-2 hover:bg-green-500 hover:text-white cursor-pointer transition"></i>
             <p className={`transition ${this.state.copy} ml-2 text-green-500`}>Text copied!</p>
           </div>
         </div>

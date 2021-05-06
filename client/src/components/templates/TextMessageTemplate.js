@@ -50,8 +50,8 @@ export default class TextMessageTemplate extends React.Component {
           </div>
           <div className="text-message text-message-copy simple">
             <div className="flex items-center">
-              <i onClick={this.handleCopy} className="fas fa-copy text-2xl text-black my-2 hover:text-green-500 cursor-pointer transition"></i>
-              <p className={`transition ${this.state.copy} ml-2 text-green-500`}>Text copied!</p>
+              <i onClick={this.handleCopy} className="bi-files text-2xl shadow text-red-500 p-2 my-3 bg-red-100 rounded hover:bg-red-500 hover:text-white cursor-pointer transition"></i>
+              <p className={`transition ${this.state.copy} ml-2 text-red-500`}>Text copied!</p>
             </div>
           </div>
         </div>

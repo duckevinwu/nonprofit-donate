@@ -124,7 +124,7 @@ export default class DemoCampaign extends React.Component {
                       </div>
                     </div>
                     <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
-                    <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View this campaign</button>
+                    <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View our campaign</button>
                   </div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default class DemoCampaign extends React.Component {
                         </div>
                       </div>
                       <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
-                      <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">View this campaign</button>
+                      <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">View our campaign</button>
                     </div>
                   </div>
                 </div>
@@ -189,10 +189,10 @@ export default class DemoCampaign extends React.Component {
         </section>
 
         <div className="tabset">
-          <input type="radio" name="tabset" id="tab1" aria-controls="tab1"/>
+          <input type="radio" name="tabset" id="tab1" aria-controls="tab1" defaultChecked/>
           <input type="radio" name="tabset" id="tab2" aria-controls="tab2"/>
           <input type="radio" name="tabset" id="tab3" aria-controls="tab3"/>
-          <input type="radio" name="tabset" id="tab4" aria-controls="tab4" defaultChecked/>
+          <input type="radio" name="tabset" id="tab4" aria-controls="tab4"/>
           <input type="radio" name="tabset" id="tab5" aria-controls="tab5"/>
           <input type="radio" name="tabset" id="tab6" aria-controls="tab6"/>
 
@@ -234,7 +234,7 @@ export default class DemoCampaign extends React.Component {
                     </div>
                     <LazyLoadImage
                       alt={"se-banner"}
-                      src={'https://i.ibb.co/gTdzn9q/image5.png'}
+                      src={'https://i.ibb.co/qpFPkpr/103555.png'}
                       effect="blur"
                       className=""
                       wrapperClassName="my-8"
@@ -265,8 +265,8 @@ export default class DemoCampaign extends React.Component {
                 <HowItWorks className="w-full lg:w-3/4"/>
               </div>
             </section>
-            <section id="tab3" className="tab-panel min-h-100vh">
-              <div className="container mx-auto px-3 lg:px-5 py-12">
+            <section id="tab3" className="tab-panel min-h-100vh or-section">
+              <div className="container mx-auto px-3 lg:px-5 pb-12 pt-20">
                 <OnlineResourcesSimple />
               </div>
             </section>
@@ -280,14 +280,18 @@ export default class DemoCampaign extends React.Component {
                       We also host an (optional) kickoff session for all of our fundraisers to attend.
                       The kickoff session will get you acquainted with how our campaigns work and give you a chance to ask any questions to us directly.
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center my-12">
-                      <div className="mb-6 sm:mb-0 sm:mr-6 w-full h-30 bg-black p-4 rounded-lg shadow-md hover:bg-green-500 transition duration-150 cursor-pointer flex flex-col items-center">
+                    <div className="grid lg:grid-cols-3 gap-4 my-12">
+                      <div className="bg-indigo-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
                         <i className="text-white bi-discord text-4xl mb-3"></i>
                         <p className="text-center text-white text-xl questrial">Join our Discord</p>
                       </div>
-                      <div className="w-full h-30 bg-black p-4 rounded-lg shadow-md hover:bg-green-500 transition duration-150 cursor-pointer flex flex-col items-center">
+                      <div className="bg-green-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
                         <i className="text-white bi-camera-video text-4xl mb-3"></i>
                         <p className="text-center text-white text-xl questrial">Register for Kickoff Session</p>
+                      </div>
+                      <div className="bg-red-400 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
+                        <i className="text-white bi-calendar-event text-4xl mb-3"></i>
+                        <p className="text-center text-white text-xl questrial">Sign up for one-on-one</p>
                       </div>
                     </div>
                   </div>

@@ -38,7 +38,7 @@ export default class TwitterTemplate extends React.Component {
 
   render() {
     return (
-      <div className={`${this.props.className} border shadow-lg email-template rounded-xl`}>
+      <div className={`${this.props.className} border shadow-lg email-template rounded-xl bg-white`}>
         <div className="flex flex-col">
           <div className="flex items-center p-2">
             <img className="w-16 h-16 rounded-full object-cover" alt="facebook-template-profile" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"/>
@@ -51,10 +51,10 @@ export default class TwitterTemplate extends React.Component {
             Please consider donating to my fundraiser for Sharing Excess! Every dollar donated = 8 lbs of food rescued.
             We even have fun donation perks! Here's the link to chip in: <font className="underline text-blue-500">[insert your unique link]</font>
           </p>
-          <div className="p-2 border-t border-gray-300">
+          <div className="px-2 mb-3">
             <div className="flex items-center">
-              <i onClick={this.handleCopy} className="fas fa-copy text-2xl text-black my-2 hover:text-green-500 cursor-pointer transition"></i>
-              <p className={`transition ${this.state.copy} ml-2 text-green-500`}>Text copied!</p>
+              <i onClick={this.handleCopy} className="bi-files text-2xl shadow text-blue-500 p-2 bg-blue-50 rounded hover:bg-blue-500 hover:text-white cursor-pointer transition"></i>
+              <p className={`transition ${this.state.copy} ml-2 text-blue-500`}>Text copied!</p>
             </div>
           </div>
         </div>
