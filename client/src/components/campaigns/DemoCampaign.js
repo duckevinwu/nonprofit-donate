@@ -103,23 +103,31 @@ export default class DemoCampaign extends React.Component {
                     <div className="w-full h-6">
                       <div className="border-t-2 border-r-2 h-full ml-auto"></div>
                     </div>
-                    <div className="flex mb-6">
-                      <div className="w-1/3 flex flex-col">
-                        <div className="text-lg font-semibold text-green-400 truncate">$4,000</div>
-                        <div className="text-xs text-gray-700">raised in total</div>
-                      </div>
-                      <div className="w-1/3 px-2 flex flex-col">
-                        <div className="text-lg font-semibold text-gray-800">24</div>
-                        <div className="text-xs text-gray-700 flex">
-                          <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
-                            advocates
+                    <div className="flex flex-col mb-6">
+                      <div className="flex w-full mb-4">
+                        <div className="mr-4 w-1/2 flex flex-col">
+                          <div className="text-lg font-semibold text-green-400 truncate">$4,000</div>
+                          <div className="text-xs text-gray-700">raised</div>
+                        </div>
+                        <div className="w-1/2 mr-4 flex flex-col">
+                          <div className="text-lg font-semibold text-gray-800">24</div>
+                          <div className="text-xs text-gray-700 flex">
+                            <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
+                              advocates
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div className="w-1/3 flex flex-col">
-                        <div className="text-lg font-semibold text-gray-800">5%</div>
-                        <div className="text-xs text-gray-700 flex">
-                          <div className="border-b border-gray-400 border-dotted" data-tooltip="Benefact will pay you 5% of the total amount you fundraise">share</div>
+                      <div className="flex w-full">
+                        <div className="w-1/2 flex flex-col">
+                          <div className="text-lg font-semibold">32,000</div>
+                          <div className="text-xs text-gray-700">meals delivered</div>
+                        </div>
+                        <div className="w-1/2 flex flex-col">
+                          <div className="text-lg font-semibold text-gray-800">5%</div>
+                          <div className="text-xs text-gray-700 flex">
+                            <div className="border-b border-gray-400 border-dotted" data-tooltip="Benefact will pay you 5% of the total amount you fundraise">share</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -160,11 +168,15 @@ export default class DemoCampaign extends React.Component {
                       </div>
                       <div className="flex flex-col">
                         <div className="flex flex-col">
-                          <div className="text-3xl font-semibold text-green-400">$4,000</div>
-                          <div className="text-sm text-gray-700">raised in total</div>
+                          <div className="text-4xl font-semibold text-green-400">$4,000</div>
+                          <div className="text-sm text-gray-700">raised</div>
                         </div>
                         <div className="flex flex-col mt-6">
-                          <div className="text-3xl font-semibold text-gray-800">24</div>
+                          <div className="text-2xl font-semibold text-gray-800">32,000</div>
+                          <div className="text-sm text-gray-700">meals delivered</div>
+                        </div>
+                        <div className="flex flex-col mt-6">
+                          <div className="text-2xl font-semibold text-gray-800">24</div>
                           <div className="text-sm text-gray-700 flex">
                             <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
                               advocates
@@ -172,7 +184,7 @@ export default class DemoCampaign extends React.Component {
                           </div>
                         </div>
                         <div className="flex flex-col mt-6">
-                          <div className="text-3xl font-semibold text-gray-800">5%</div>
+                          <div className="text-2xl font-semibold text-gray-800">5%</div>
                           <div className="text-sm text-gray-700 flex">
                             <div className="border-b border-gray-400 border-dotted" data-tooltip="Benefact will pay you 5% of the total amount you fundraise">share</div>
                           </div>

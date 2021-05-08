@@ -111,14 +111,59 @@
 /* --- */
 
 .nonprofit-grid {
-  grid-template-columns: repeat(auto-fit, 350px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+  grid-auto-rows: 1fr; /* make all rows the same height in grid */
 }
 
-.nonprofit-grid > div:first-child {
+.np-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+}
+
+.np-image {
+  position: absolute;
+  top: 0;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .nonprofit-grid > div:first-child {
   grid-column: 1 / -1;
-}
+} */
 
-.nonprofit-card {
+/* .nonprofit-card {
 }
 
 .layer {
@@ -157,4 +202,4 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
+} */
