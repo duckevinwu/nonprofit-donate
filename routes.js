@@ -1,4 +1,7 @@
 const https = require('https');
+const NodeCache = require( "node-cache" );
+
+const apiCache = new NodeCache();
 
 function getTestCampaign(req, res) {
 
@@ -32,9 +35,22 @@ function getTestCampaign(req, res) {
   });
 }
 
+function getNonprofits(req, res) {
+  let cacheNonprofits = apiCache.get("nonprofits");
+  if (cacheNonprofits) {
+    res.json("cached value")
+  } else {
+    // make api call
+    let apiResult = "test"
+    let setCache = apiCache.set("nonprofits", apiResult, 30);
+    res.json("not cached value")
+  }
+}
+
 // The exported functions, which can be accessed in index.js.
 module.exports = {
-  getTestCampaign: getTestCampaign
+  getTestCampaign: getTestCampaign,
+  getNonprofits: getNonprofits
 }
 
 

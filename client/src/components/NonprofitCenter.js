@@ -19,7 +19,7 @@ export default class NonprofitCenter extends React.Component {
     }, err => {
       console.log(err);
     }).then(nonprofitList => {
-
+      console.log(nonprofitList);
       // Map each attribute of a person in this.state.people to an HTML element
       // let peopleDivs = peopleList.map((person, i) =>
       // <div key={i} className="person">
