@@ -1,2 +1,5 @@
+#Ignore these files
+.env
+
 #Ignore these directories
 node_modules/

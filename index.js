@@ -1,3 +1,4 @@
+require('dotenv').config()
 const bodyParser = require('body-parser');
 const express = require('express');
 var routes = require("./routes.js");
@@ -23,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 // The route localhost:8081/people is registered to the function
 // routes.getAllPeople, specified in routes.js.
 app.get('/api/test/campaign', routes.getTestCampaign);
-app.get('/api/nonprofits', routes.getNonprofits);
+app.get('/api/nonprofits/:index', routes.getNonprofits);
 
 /* ---- Part 2 (FindFriends) ---- */
 // TODO: (2) - Add route '/friends/:login' for the functionality of FindFriends page

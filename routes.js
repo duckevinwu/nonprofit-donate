@@ -1,7 +1,9 @@
 const https = require('https');
 const NodeCache = require( "node-cache" );
+var Airtable = require('airtable');
 
 const apiCache = new NodeCache();
+var nonprofitBase = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base('app9tFZaPm5svETpk');
 
 function getTestCampaign(req, res) {
 
@@ -36,14 +38,47 @@ function getTestCampaign(req, res) {
 }
 
 function getNonprofits(req, res) {
-  let cacheNonprofits = apiCache.get("nonprofits");
+  let startIndex = req.params.index || 1;
+  getRecords(res, true, startIndex, 0);
+}
+
+// get correct chunk of records from Airtable and cache result
+function getRecords(res, isChunk, startIndex, exactIndex) {
+  let cacheNonprofits = apiCache.get(`nonprofits-${startIndex}`);
   if (cacheNonprofits) {
-    res.json("cached value")
+    if (isChunk) {
+      res.json({status: 'success', cache: 'yes', records: cacheNonprofits})
+    } else {
+      res.json({status: 'success', cache: 'yes', record: cacheNonprofits[exactIndex]});
+    }
   } else {
     // make api call
-    let apiResult = "test"
-    let setCache = apiCache.set("nonprofits", apiResult, 30);
-    res.json("not cached value")
+    nonprofitBase('Nonprofits').select({
+      filterByFormula: `AND({id} >= ${startIndex}, {id} < ${startIndex + 100})`,
+      pageSize: 100,
+      sort: [{field: "id", direction: "asc"}]
+    }).firstPage(function(err, records) {
+      if (err) {
+        console.error(err);
+        res.json({status: 'fail', message: 'error retrieving from airtable'});
+      }
+
+      let apiRecords = {};
+      records.forEach(function(record) {
+        apiRecords[record.get("id")] = record.fields;
+      });
+
+      let setCache = apiCache.set(`nonprofits-${startIndex}`, apiRecords, 30);
+      if (setCache) {
+        if (isChunk) {
+          res.json({status: 'success', cache: 'no', records: apiRecords})
+        } else {
+          res.json({status: 'success', cache: 'no', records: apiRecords[exactIndex]})
+        }
+      } else {
+        res.json({status: 'fail', message: 'error setting cache'})
+      }
+    });
   }
 }
 

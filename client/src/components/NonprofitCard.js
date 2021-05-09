@@ -34,7 +34,7 @@ class NonprofitCard extends React.Component {
         <div className="bg-white -mt-6 z-10 relative rounded-t-2xl border-t border-gray-200">
           <div className="p-4 flex flex-col">
             <div className="flex flex-col">
-              <h2 className="questrial font-bold text-2xl tracking-wide">{this.props.title}</h2>
+              <h2 className="questrial font-bold text-2xl tracking-wide">{this.props.name}</h2>
               <div className="flex text-gray-500 text-sm my-2">
                 <i className="bi-geo-alt"></i>
                 <p className="ml-1">{this.props.geoLocation}</p>

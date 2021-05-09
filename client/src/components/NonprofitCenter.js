@@ -11,7 +11,7 @@ export default class NonprofitCenter extends React.Component {
   }
 
   componentDidMount() {
-    fetch("/api/nonprofits",
+    fetch("/api/nonprofits/1",
     {
       method: 'GET'
     }).then(res => {
@@ -54,7 +54,7 @@ export default class NonprofitCenter extends React.Component {
             </div>
           </div>
         </section>
-        <section>
+        <section className="bg-green-50">
           <div className="container mx-auto px-3 py-12 lg:px-5">
             <div className="flex w-full justify-center mb-12">
               <h1 className="questrial uppercase text-lg text-gray-700 tracking-widest">Our Nonprofit Partners</h1>
@@ -62,10 +62,10 @@ export default class NonprofitCenter extends React.Component {
             <div className="grid justify-center gap-8 nonprofit-grid">
               <NonprofitCard
                 id="1"
-                imageUrl="https://i.ibb.co/tYtZ8tQ/image1.png"
-                title="Sharing Excess"
-                geoLocation="Philadelphia, PA"
+                name="Sharing Excess"
                 description="Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia. We are striving to hit 3 million pounds of food donated by November of 2021, and we can’t do it without your support!"
+                imageUrl="https://i.ibb.co/tYtZ8tQ/image1.png"
+                geoLocation="Philadelphia, PA"
                 raised="$4,000"
                 impactAmount="32,000"
                 impactMetric="meals delivered"
