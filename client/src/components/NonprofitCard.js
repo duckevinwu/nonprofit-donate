@@ -49,7 +49,7 @@ class NonprofitCard extends React.Component {
             <div className="flex flex-col w-full mb-2">
               <div className="flex mb-2">
                 <div className="w-1/2 mr-2">
-                  <p className="font-semibold text-green-500 truncate text-lg">{this.props.raised}</p>
+                  <p className="font-semibold text-green-400 truncate text-lg">{this.props.raised}</p>
                   <p className="text-xs text-gray-700">raised</p>
                 </div>
                 <div className="w-1/2">

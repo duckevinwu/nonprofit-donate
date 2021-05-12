@@ -10,6 +10,7 @@ import SignUp from './SignUp';
 import Login from './Login';
 import Profile from './Profile';
 import ReturnFromEmail from './ReturnFromEmail';
+import IdeaBank from './IdeaBank';
 
 // campaigns
 import DemoCampaign from './campaigns/DemoCampaign.js';
@@ -68,6 +69,13 @@ export default class App extends React.Component {
 							path="/demo"
 							render={() => (
 								<DemoCampaign />
+							)}
+						/>
+						<Route
+							exact
+							path="/ideabank"
+							render={() => (
+								<IdeaBank />
 							)}
 						/>
 					</Switch>
