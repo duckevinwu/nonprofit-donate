@@ -5,18 +5,14 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../style/NonprofitCenter.css';
 
 class NonprofitCard extends React.Component {
-
   constructor(props) {
     super(props)
 
     this.visitNonprofit = this.visitNonprofit.bind(this);
-
   }
 
   visitNonprofit(e) {
-    console.log(this.props.id);
-    // e.stopPropagation();
-    // this.props.history.push(this.props.redirect);
+    this.props.history.push(this.props.redirect);
   }
 
   render() {

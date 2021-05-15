@@ -1,6 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import '../style/LandingPage.css';
 import CycleSelect from './CycleSelect';
+import Navbar from './Navbar';
 
 // import svgs
 import hero from '../assets/hero.svg';
@@ -14,19 +16,23 @@ import work from '../assets/work.svg';
 import free from '../assets/free.svg';
 import community from '../assets/community.svg';
 
-export default class LandingPage extends React.Component {
+class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
+
+  handleButtonClick(e) {
+    let value = e.currentTarget.getAttribute('data-value');
+  }
+
   render() {
     return (
       <>
         <section className="hero-section">
           <div className="container mx-auto px-3 lg:px-5">
-            <div className="navbar-container flex items-center">
-              <div className="flex items-center">
-                <img className="h-8 w-8 lg:h-16 lg:w-16" alt="logo" src="https://i.ibb.co/BC0YYDZ/benefact-logo.png"></img>
-                <div className="questrial text-lg lg:text-xl font-bold tracking-wider">Benefact</div>
-              </div>
-              <div className="ml-auto hidden">Menu</div>
-            </div>
+            <Navbar/>
             <div className="hero-info-container flex items-center justify-center">
               <div className="flex flex-col items-center lg:flex-row">
                 <div className="text-center lg:text-left lg:mr-10 mb-16 lg:mb-0 flex items-center lg:w-1/2">
@@ -186,3 +192,5 @@ export default class LandingPage extends React.Component {
     )
   }
 }
+
+export default withRouter(LandingPage);

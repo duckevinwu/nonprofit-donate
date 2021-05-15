@@ -73,7 +73,7 @@ export default class App extends React.Component {
 						/>
 						<Route
 							exact
-							path="/ideabank"
+							path="/ideas"
 							render={() => (
 								<IdeaBank />
 							)}

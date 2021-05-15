@@ -14,11 +14,13 @@
 }
 
 .navbar-container {
-  height: 10vh;
+  min-height: 10vh;
+  height: 100%;
 }
 
 .hero-info-container {
-  height: 90vh;
+  min-height: 90vh;
+  height: 100%;
 }
 
 .hero-image {

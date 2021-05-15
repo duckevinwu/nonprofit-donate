@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../Navbar';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '../../style/Campaign.css';
 import '../../style/Tooltip.css';
@@ -68,6 +69,7 @@ export default class DemoCampaign extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     window.addEventListener('scroll', this.handleStickyScroll);
   }
 
@@ -79,6 +81,11 @@ export default class DemoCampaign extends React.Component {
   render() {
     return (
       <>
+        <section>
+          <div className="container mx-auto px-3 lg:px-5">
+            <Navbar/>
+          </div>
+        </section>
         <section className="h-full lg:mb-20">
           <div className="container mx-auto px-3 py-8 lg:py-12 lg:px-5">
             <div className="lg:hidden">

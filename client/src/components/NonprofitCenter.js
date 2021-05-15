@@ -1,5 +1,7 @@
 import React from 'react';
 import NonprofitCard from './NonprofitCard';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import '../style/NonprofitCenter.css';
 
 // import svgs
@@ -11,6 +13,7 @@ export default class NonprofitCenter extends React.Component {
   }
 
   componentDidMount() {
+    /*
     fetch("/api/nonprofits/1",
     {
       method: 'GET'
@@ -36,11 +39,17 @@ export default class NonprofitCenter extends React.Component {
       // Print the error if there is one.
       console.log(err);
     });
+    */
   }
 
   render() {
     return (
       <>
+        <section>
+          <div className="container mx-auto px-3 lg:px-5">
+            <Navbar/>
+          </div>
+        </section>
         <section className="mt-12">
           <div className="container mx-auto px-3 py-12 lg:px-5">
             <div className="flex flex-col md:flex-row w-full">
@@ -55,7 +64,7 @@ export default class NonprofitCenter extends React.Component {
           </div>
         </section>
         <section className="bg-green-50">
-          <div className="container mx-auto px-3 py-12 lg:px-5">
+          <div className="container mx-auto px-3 py-24 lg:px-5">
             <div className="flex w-full justify-center mb-12">
               <h1 className="questrial uppercase text-lg text-gray-700 tracking-widest">Our Nonprofit Partners</h1>
             </div>
@@ -71,10 +80,12 @@ export default class NonprofitCenter extends React.Component {
                 impactMetric="meals delivered"
                 advocates="23"
                 share="5%"
+                redirect="/demo"
               />
             </div>
           </div>
         </section>
+        <Footer/>
       </>
     )
   }
