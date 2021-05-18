@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Campaign.css';
 
-export default class OnlineResources extends React.Component {
+export default class HowItWorks extends React.Component {
   render() {
     return (
       <div className={`grid grid-cols-1 py-20 ${this.props.className}`}>

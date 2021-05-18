@@ -3,9 +3,9 @@ import Navbar from '../Navbar';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import '../../style/Campaign.css';
 import '../../style/Tooltip.css';
+import '../../style/Modal.css';
 
 import OnlineResourcesSimple from '../OnlineResourcesSimple.js';
-import HowItWorks from '../HowItWorks.js';
 import ContactForm from '../ContactForm.js';
 
 export default class DemoCampaign extends React.Component {
@@ -22,13 +22,16 @@ export default class DemoCampaign extends React.Component {
       coverImageUrl: 'https://givebutter.s3.amazonaws.com/media/DjjZmr1GGQaqXi4m2bBzngYNH3RycWev4Qa6ZNsF.jpg',
       logoImageUrl: '',
       hidden: 'hidden',
-      coverVideo: videoEmbed
+      coverVideo: videoEmbed,
+      advocateModal: 'modal-closed'
     }
 
     this.stickyNav = React.createRef();
     this.tabPanels = React.createRef();
     this.handleStickyScroll = this.handleStickyScroll.bind(this);
     this.handleTabChange = this.handleTabChange.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   handleStickyScroll() {
@@ -68,8 +71,21 @@ export default class DemoCampaign extends React.Component {
     })
   }
 
+  openModal() {
+    document.body.style.overflowY = 'hidden';
+    this.setState({
+      advocateModal: ''
+    })
+  }
+
+  closeModal() {
+    document.body.style.overflowY = 'auto';
+    this.setState({
+      advocateModal: 'modal-closed'
+    })
+  }
+
   componentDidMount() {
-    window.scrollTo(0, 0);
     window.addEventListener('scroll', this.handleStickyScroll);
   }
 
@@ -97,14 +113,16 @@ export default class DemoCampaign extends React.Component {
                 </div>
                 <div className="flex flex-col md:flex-row md:mt-8">
                   <div className="my-8 md:my-0 md:w-1/2 md:mr-4">
-                    <div className="border rounded shadow flex flex-col p-3">
-                      <div>
-                        <img src="https://images.squarespace-cdn.com/content/5ac3e0a85417fc6763844546/1610569439154-CE22600W6FASG64C0965/IMG_6851-5.PNG?format=1500w&content-type=image%2Fpng" alt="nonprofit-logo" className="nonprofit-logo"></img>
+                    <a href="https://www.sharingexcess.com" target="_blank" rel="noopener noreferrer">
+                      <div className="transition border rounded shadow flex flex-col p-3 hover:shadow-lg">
+                        <div>
+                          <img src="https://images.squarespace-cdn.com/content/5ac3e0a85417fc6763844546/1610569439154-CE22600W6FASG64C0965/IMG_6851-5.PNG?format=1500w&content-type=image%2Fpng" alt="nonprofit-logo" className="nonprofit-logo"></img>
+                        </div>
+                        <div className="font-bold questrial text-lg">Sharing Excess</div>
+                        <div className="text-sm"><i className="bi-globe"></i> sharingexcess.com</div>
+                        <div className="text-sm"><i className="bi-geo-alt"></i> Philadelphia, PA</div>
                       </div>
-                      <div className="font-bold questrial text-lg">Sharing Excess</div>
-                      <div className="text-sm"><i className="bi-globe"></i> sharingexcess.com</div>
-                      <div className="text-sm"><i className="bi-geo-alt"></i> Philadelphia, PA</div>
-                    </div>
+                    </a>
                   </div>
                   <div className="flex flex-col md:w-1/2 md:justify-center">
                     <div className="w-full h-6">
@@ -138,8 +156,10 @@ export default class DemoCampaign extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
-                    <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View our campaign</button>
+                    <button onClick={this.openModal} className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                    <a href="https://givebutter.com/sharingexcessdemo" target="_blank" rel="noopener noreferrer" className="mt-4">
+                      <button className="w-full transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View our campaign</button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -153,16 +173,18 @@ export default class DemoCampaign extends React.Component {
                       Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia. We are striving to hit 3 million pounds of food donated by November of 2021, and we can’t do it without your support!
                     </div>
                   </div>
-                  <div className="border rounded shadow w-1/4">
-                    <div className="flex flex-col p-3">
-                      <div>
-                        <img src="https://images.squarespace-cdn.com/content/5ac3e0a85417fc6763844546/1610569439154-CE22600W6FASG64C0965/IMG_6851-5.PNG?format=1500w&content-type=image%2Fpng" alt="nonprofit-logo" className="nonprofit-logo"></img>
+                  <a href="https://www.sharingexcess.com" target="_blank" rel="noopener noreferrer" className="w-1/4">
+                    <div className="transition border rounded shadow w-full hover:shadow-lg">
+                      <div className="flex flex-col p-3">
+                        <div>
+                          <img src="https://images.squarespace-cdn.com/content/5ac3e0a85417fc6763844546/1610569439154-CE22600W6FASG64C0965/IMG_6851-5.PNG?format=1500w&content-type=image%2Fpng" alt="nonprofit-logo" className="nonprofit-logo"></img>
+                        </div>
+                        <div className="font-bold questrial text-lg">Sharing Excess</div>
+                        <div className="text-sm text-gray-700"><i className="bi-globe"></i> sharingexcess.com</div>
+                        <div className="text-sm text-gray-700"><i className="bi-geo-alt"></i> Philadelphia, PA</div>
                       </div>
-                      <div className="font-bold questrial text-lg">Sharing Excess</div>
-                      <div className="text-sm text-gray-700"><i className="bi-globe"></i> sharingexcess.com</div>
-                      <div className="text-sm text-gray-700"><i className="bi-geo-alt"></i> Philadelphia, PA</div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div className="flex mt-12">
                   <div className="w-2/3 mr-6">
@@ -197,8 +219,10 @@ export default class DemoCampaign extends React.Component {
                           </div>
                         </div>
                       </div>
-                      <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
-                      <button className="mt-4 transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">View our campaign</button>
+                      <button onClick={this.openModal} className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                      <a href="https://givebutter.com/sharingexcessdemo" target="_blank" rel="noopener noreferrer" className="mt-4">
+                        <button className="w-full transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">View our campaign</button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -222,7 +246,7 @@ export default class DemoCampaign extends React.Component {
               <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Fundraising Resources</label>
               <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Community</label>
               <div className={`ml-auto hidden lg:flex lg:${this.state.hidden}`}>
-                <button className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                <button onClick={this.openModal} className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
               </div>
             </div>
           </div>
@@ -273,7 +297,7 @@ export default class DemoCampaign extends React.Component {
                       </h4>
                     </div>
                     <div className="flex justify-center">
-                      <button className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                      <button onClick={this.openModal} className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
                     </div>
                   </div>
                 </div>
@@ -281,7 +305,63 @@ export default class DemoCampaign extends React.Component {
             </section>
             <section id="tab2" className="tab-panel min-h-100vh">
               <div className="container mx-auto px-3 lg:px-5 flex justify-center">
-                <HowItWorks className="w-full lg:w-3/4"/>
+                <div className={`grid grid-cols-1 py-20 w-full lg:w-3/4`}>
+                  <div className="flex flex-col md:flex-row items-center">
+                    <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-red-50 p-4 flex flex-col rounded-lg shadow-lg">
+                      <div className="flex">
+                        <div className="text-red-500 text-8xl font-bold questrial">1</div>
+                        <i className="ml-auto bi-box-arrow-in-right text-4xl text-red-500"></i>
+                      </div>
+                      <div className="mt-auto questrial text-2xl font-bold">Sign up to be an Advocate</div>
+                    </div>
+                    <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
+                      <p className="text-gray-600">All you have to do is fill out a simple form with your name, email, and other basic details.</p>
+                      <button onClick={this.openModal} className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Become an Advocate <i className="bi-chevron-right"></i></button>
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row items-center mt-12">
+                    <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-yellow-50 p-4 flex flex-col rounded-lg shadow-lg">
+                      <div className="flex">
+                        <div className="text-yellow-500 text-8xl font-bold questrial">2</div>
+                        <i className="ml-auto bi-envelope text-4xl text-yellow-500"></i>
+                      </div>
+                      <div className="mt-auto questrial text-2xl font-bold">Receive your welcome email</div>
+                    </div>
+                    <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
+                      <p className="text-gray-600">We'll send you an email with your unique campaign link and all of our tips and tricks to become a successful fundraiser.</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row items-center mt-12">
+                    <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-blue-50 p-4 flex flex-col rounded-lg shadow-lg">
+                      <div className="flex">
+                        <div className="text-blue-500 text-8xl font-bold questrial">3</div>
+                        <i className="ml-auto bi-people text-4xl text-blue-500"></i>
+                      </div>
+                      <div className="mt-auto questrial text-2xl font-bold">Launch your campaign</div>
+                    </div>
+                    <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
+                      <p className="text-gray-600">
+                        Rack up those donations by directing anyone to donate via your unique link!
+                        The more money you raise, the more you earn.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col md:flex-row items-center mt-12">
+                    <div className="w-full sm:w-1/2 md:w-1/3 h-60 bg-green-50 p-4 flex flex-col rounded-lg shadow-lg">
+                      <div className="flex">
+                        <div className="text-green-500 text-8xl font-bold questrial">4</div>
+                        <i className="ml-auto bi-cash-stack text-4xl text-green-500"></i>
+                      </div>
+                      <div className="mt-auto questrial text-2xl font-bold">Get paid</div>
+                    </div>
+                    <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
+                      <p className="text-gray-600">
+                        At the end of your campaign, Benefact will pay you directly.
+                        We'll also send you an Impact Report detailing the amount of money you raised and the impact that you made on Sharing Excess.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
             <section id="tab3" className="tab-panel min-h-100vh or-section">
@@ -295,29 +375,42 @@ export default class DemoCampaign extends React.Component {
                   <div className="flex flex-col w-full lg:w-10/12">
                     <h2 className="questrial font-bold text-5xl mb-4">Our commmunity is here to support you</h2>
                     <p className="">
-                      We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat to connect with other Advocates or ask any questions to the Benefact/Sharing Excess team below!
-                      We also host an (optional) kickoff session for all of our fundraisers to attend.
-                      The kickoff session will get you acquainted with how our campaigns work and give you a chance to ask any questions to us directly.
+                      We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat, register for our (optional) Kickoff Session, and/or sign up for a one-on-one chat!
+                      In our Discord, you can ask questions to our Advocate community, discover unique fundraising ideas, and chat with the Benefact admin team.
+                      In our Kickoff Session, you’ll learn about how Benefact works and the lifecycle of our campaigns.
+                      And if you have more direct questions, the one-on-one session is perfect for you.
                     </p>
                     <div className="grid lg:grid-cols-3 gap-4 my-12">
-                      <div className="bg-indigo-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
-                        <i className="text-white bi-discord text-4xl mb-3"></i>
-                        <p className="text-center text-white text-xl questrial">Join our Discord</p>
-                      </div>
-                      <div className="bg-green-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
-                        <i className="text-white bi-camera-video text-4xl mb-3"></i>
-                        <p className="text-center text-white text-xl questrial">Register for Kickoff Session</p>
-                      </div>
-                      <div className="bg-red-400 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
-                        <i className="text-white bi-calendar-event text-4xl mb-3"></i>
-                        <p className="text-center text-white text-xl questrial">Sign up for one-on-one</p>
-                      </div>
+                      <a href="https://discord.gg/WVDEebeFpt" target="_blank" rel="noopener noreferrer">
+                        <div className="bg-indigo-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
+                          <i className="text-white bi-discord text-4xl mb-3"></i>
+                          <p className="text-center text-white text-xl questrial">Join our Discord</p>
+                        </div>
+                      </a>
+                      <a href="https://www.eventbrite.com/e/sharing-excess-kickoff-tickets-155432884943" target="_blank" rel="noopener noreferrer">
+                        <div className="bg-green-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
+                          <i className="text-white bi-camera-video text-4xl mb-3"></i>
+                          <p className="text-center text-white text-xl questrial">Register for Kickoff Session</p>
+                        </div>
+                      </a>
+                      <a href="https://calendly.com/benefact/1-on-1?month=2021-05" target="_blank" rel="noopener noreferrer">
+                        <div className="bg-red-400 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
+                          <i className="text-white bi-calendar-event text-4xl mb-3"></i>
+                          <p className="text-center text-white text-xl questrial">Sign up for one-on-one</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
                 <ContactForm/>
               </div>
             </section>
+          </div>
+        </div>
+        <div className={'modal ' + this.state.advocateModal}>
+          <button className="close" onClick={this.closeModal}>&times;</button>
+          <div className="center text-center launch-form">
+            <iframe title="advocate-form" className="launch-form" loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSeCmX3skh2AuTsJ-PM2vqUbpWfNj5iwBliloDBpbJodOTt4wA/viewform?embedded=true" width="100%" height="1225" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
           </div>
         </div>
       </>

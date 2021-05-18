@@ -1,20 +1,9 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../style/NonprofitCenter.css';
 
-class NonprofitCard extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.visitNonprofit = this.visitNonprofit.bind(this);
-  }
-
-  visitNonprofit(e) {
-    this.props.history.push(this.props.redirect);
-  }
-
+export default class NonprofitCard extends React.Component {
   render() {
     return (
       <div className="flex flex-col rounded-lg shadow-xl">
@@ -67,13 +56,11 @@ class NonprofitCard extends React.Component {
           </div>
         </div>
         <div className="flex justify-center mt-auto">
-          <button onClick={this.visitNonprofit} className="w-full rounded-b-xl transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-8 focus:outline-none hover:bg-green-400 hover:text-black cursor-pointer">Learn more</button>
+          <a href={this.props.redirect} className="w-full">
+            <button className="w-full rounded-b-xl transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-8 focus:outline-none hover:bg-green-400 hover:text-black cursor-pointer">Learn more</button>
+          </a>
         </div>
       </div>
     )
   }
-
-
 }
-
-export default withRouter(NonprofitCard);

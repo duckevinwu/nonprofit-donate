@@ -20,11 +20,26 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleButtonClick = this.handleButtonClick.bind(this);
+    this.state = {
+      partnerModal: 'modal-closed'
+    }
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
-  handleButtonClick(e) {
-    let value = e.currentTarget.getAttribute('data-value');
+  openModal() {
+    document.body.style.overflowY = 'hidden';
+    this.setState({
+      partnerModal: ''
+    })
+  }
+
+  closeModal() {
+    document.body.style.overflowY = 'auto';
+    this.setState({
+      partnerModal: 'modal-closed'
+    })
   }
 
   render() {
@@ -41,7 +56,9 @@ class LandingPage extends React.Component {
                     <p className="sm:text-lg leading-relaxed mb-6 text-gray-800">
                       Benefact is where anyone can get paid to raise money for nonprofits.
                     </p>
-                    <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Get started <i className="bi-chevron-right ml-6"></i></button>
+                    <a href="/nonprofits">
+                      <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Get started <i className="bi-chevron-right ml-6"></i></button>
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center justify-center lg:w-1/2">
@@ -135,10 +152,12 @@ class LandingPage extends React.Component {
             </div>
           </div>
           <div className="flex justify-center lg:mt-12">
-            <button className="transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View nonprofits <i className="bi-chevron-right ml-6"></i></button>
+            <a href="/nonprofits">
+              <button className="transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View nonprofits <i className="bi-chevron-right ml-6"></i></button>
+            </a>
           </div>
         </section>
-        <section className="bg-green-50 pt-12">
+        <section id="nonprofits" className="bg-green-50 pt-12">
           <div className="container mx-auto px-3 lg:px-5">
             <h3 className="questrial uppercase text-gray-600 tracking-widest">For nonprofits</h3>
             <h2 className="questrial text-3xl mt-6 mb-12 font-bold">Raise money effortlessly.</h2>
@@ -167,7 +186,7 @@ class LandingPage extends React.Component {
             </div>
           </div>
           <div className="flex justify-center pb-12">
-            <button className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-gray-700 cursor-pointer">Partner with us <i className="bi-chevron-right ml-6"></i></button>
+            <button onClick={this.openModal} className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-gray-700 cursor-pointer">Partner with us <i className="bi-chevron-right ml-6"></i></button>
           </div>
         </section>
         <section className="bg-black">
@@ -175,11 +194,13 @@ class LandingPage extends React.Component {
             <div className="flex flex-col md:flex-row md:items-center">
               <div className="md:w-1/2 text-white text-center questrial text-4xl font-bold mb-8 md:mb-0">Ready to get started?</div>
               <div className="md:w-1/2 flex flex-col items-center">
-                <div className="w-60 flex items-center transition duration-300 ease-in-out text-black bg-white border border-white py-3 px-6 focus:outline-none rounded hover:bg-green-300 hover:border-green-300 cursor-pointer">
-                  <p>Support a nonprofit</p>
-                  <i className="bi-chevron-right ml-auto"></i>
-                </div>
-                <div className="mt-6 w-60 flex items-center transition duration-300 ease-in-out text-white bg-black border border border-white py-3 px-6 focus:outline-none rounded hover:border-green-300 hover:text-green-300 cursor-pointer">
+                <a href="/nonprofits">
+                  <div className="w-60 flex items-center transition duration-300 ease-in-out text-black bg-white border border-white py-3 px-6 focus:outline-none rounded hover:bg-green-300 hover:border-green-300 cursor-pointer">
+                    <p>Support a nonprofit</p>
+                    <i className="bi-chevron-right ml-auto"></i>
+                  </div>
+                </a>
+                <div onClick={this.openModal} className="mt-6 w-60 flex items-center transition duration-300 ease-in-out text-white bg-black border border border-white py-3 px-6 focus:outline-none rounded hover:border-green-300 hover:text-green-300 cursor-pointer">
                   <p>Become our partner</p>
                   <i className="bi-chevron-right ml-auto"></i>
                 </div>
@@ -188,6 +209,12 @@ class LandingPage extends React.Component {
             <div className="text-center text-white mt-12">© 2021 Benefact</div>
           </div>
         </section>
+        <div className={'modal ' + this.state.partnerModal}>
+          <button className="close" onClick={this.closeModal}>&times;</button>
+          <div className="center text-center launch-form">
+            <iframe title="nonprofit-form" className="launch-form" loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSf7Trj71qyJwUGkvnDk3HLFVPauBpwvhZEUXwm1L-m2pRfJTA/viewform?embedded=true" width="100%" height="1110" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+          </div>
+        </div>
       </>
     )
   }
