@@ -15,6 +15,11 @@ import IdeaBank from './IdeaBank';
 // campaigns
 import DemoCampaign from './campaigns/DemoCampaign.js';
 
+// help center
+import HelpCenter from './helpcenter/HelpCenter';
+import CampaignTypes from './helpcenter/pages/CampaignTypes';
+import Payout from './helpcenter/pages/Payout';
+
 export default class App extends React.Component {
 
 	render() {
@@ -76,6 +81,27 @@ export default class App extends React.Component {
 							path="/ideas"
 							render={() => (
 								<IdeaBank />
+							)}
+						/>
+						<Route
+							exact
+							path="/help"
+							render={() => (
+								<HelpCenter />
+							)}
+						/>
+						<Route
+							exact
+							path="/help/campaigntypes"
+							render={() => (
+								<CampaignTypes />
+							)}
+						/>
+						<Route
+							exact
+							path="/help/payout"
+							render={() => (
+								<Payout />
 							)}
 						/>
 					</Switch>
