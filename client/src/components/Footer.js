@@ -21,6 +21,9 @@ export default class Footer extends React.Component {
                   <li className="">
                     <a href="/nonprofits"className="text-sm text-gray-200 hover:text-green-400 cursor-pointer">Explore Nonprofits</a>
                   </li>
+                  <li className="mt-2">
+                    <a href="/help" target="_blank" className="text-sm text-gray-200 hover:text-green-400 cursor-pointer">Help Center</a>
+                  </li>
                 </nav>
               </div>
             </div>

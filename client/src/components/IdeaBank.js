@@ -1,5 +1,7 @@
 import React from 'react';
 import IdeaCard from './IdeaCard.js';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import '../style/Ideas.css';
 
 // import svgs
@@ -217,6 +219,11 @@ export default class IdeaBank extends React.Component {
 
     return (
       <>
+        <section>
+          <div className="container mx-auto px-3 lg:px-5">
+            <Navbar/>
+          </div>
+        </section>
         <section className="mt-12">
           <div className="container mx-auto px-3 py-12 lg:px-5">
             <div className="flex flex-col md:flex-row w-full">
@@ -252,6 +259,7 @@ export default class IdeaBank extends React.Component {
             </div>
           </div>
         </section>
+        <Footer/>
       </>
     )
   }

@@ -359,6 +359,9 @@ export default class DemoCampaign extends React.Component {
                         At the end of your campaign, Benefact will pay you directly.
                         We'll also send you an Impact Report detailing the amount of money you raised and the impact that you made on Sharing Excess.
                       </p>
+                      <a href="/help/payout" target="_blank">
+                        <button className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Learn about payouts <i className="bi-chevron-right"></i></button>
+                      </a>
                     </div>
                   </div>
                 </div>

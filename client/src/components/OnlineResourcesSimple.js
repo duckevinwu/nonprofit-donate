@@ -14,6 +14,30 @@ export default class OnlineResourcesSimple extends React.Component {
           <div className="w-full lg:w-1/2">
             <div className="lg:w-11/12">
               <div className="flex items-center">
+                <h2 className="lg:text-white text-4xl lg:text-5xl questrial font-bold">Fundraising Resources</h2>
+              </div>
+              <div className="text-gray-700 lg:text-gray-200 mt-6 text-lg">
+                <p>
+                  Starting a fundraising campaign is intimidating for anyone, but we make it our mission to make the process as easy as possible for Advocates.
+                  Our <a href="/ideas" target="_blank" className="transition text-green-400 hover:text-green-300">Idea Bank</a> is a good way to start brainstorming possible campaign ideas - we've included an extensive list of proven ways to raise money for charity.
+                </p>
+                <p className="mt-6 text-lg">
+                  Below, we've also included several resources to easily kickstart your fundraising campaign.
+                  Feel free to use any of our templates, and don't be afraid to modify and personalize them to your needs!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 lg:mt-0">
+            <div className="flex flex-col items-center">
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col lg:flex-row items-center mt-36">
+          <div className="w-full lg:w-1/2">
+            <div className="lg:w-11/12">
+              <div className="flex items-center">
                 <i className="shadow-md p-3 bg-green-50 rounded-lg text-4xl text-green-500 font-bold bi-envelope mr-3"></i>
                 <h2 className="lg:text-white text-4xl questrial font-bold">Email</h2>
               </div>

@@ -8,10 +8,7 @@ import '../style/NonprofitCenter.css';
 import discover from '../assets/discover.svg';
 
 export default class NonprofitCenter extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   componentDidMount() {
     /*
     fetch("/api/nonprofits/1",
