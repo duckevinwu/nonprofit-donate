@@ -6,3 +6,15 @@
   text-indent: -1rem;
   padding-left: 1rem;
 }
+
+.image-link {
+  z-index: 10;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-link:hover {
+  opacity: 0.3;
+  cursor: pointer;
+}
