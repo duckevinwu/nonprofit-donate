@@ -26,7 +26,7 @@ export default class HelpCenter extends React.Component {
             />
             <HCCard
               className="mb-8"
-              icon="bi-cash-stack"
+              icon="bi-journal-check"
               title="Getting started with GiveButter"
               description="For nonprofits - a comprehensive guide to creating a GiveButter account and connecting your organization's bank account."
               redirect="/help/gb"

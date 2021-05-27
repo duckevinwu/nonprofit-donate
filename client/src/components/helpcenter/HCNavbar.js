@@ -2,9 +2,6 @@ import React from 'react';
 import '../../style/HelpCenter.css';
 
 export default class HCNavbar extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <nav className="bg-black text-white">
