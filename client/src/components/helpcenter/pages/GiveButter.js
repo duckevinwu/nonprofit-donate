@@ -43,14 +43,23 @@ export default class GiveButter extends React.Component {
               </div>
               <div className="mt-12">
                 <h3 className="text-xl mb-4">6. Verify nonprofit (enter EIN)</h3>
+                <p className="mb-4">
+                  By doing so, your nonprofit will receive some exclusive benefits, including
+                  the ability to process ACH Payments, having a shorter pending period for all transactions,
+                  and automate your tax-deductible donation receipts to include your EIN.
+                  If you're looking for more information, GiveButter has a nice <a href="https://help.givebutter.com/en/articles/2755361-how-can-i-get-my-nonprofit-verified-and-what-are-the-benefits-of-doing-so" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-500 underline cursor-pointer">guide</a> to answer any other questions you may have.
+                </p>
                 <HCImage src="https://i.ibb.co/q0NSRXP/image17.png"/>
               </div>
               <div className="mt-12">
-                <h3 className="text-xl mb-4">7. Integrate Payouts (Payouts tab)</h3>
+                <h3 className="text-xl mb-4">7. Click on Payouts tab on left sidebar and press the "Connect" button</h3>
                 <HCImage src="https://i.ibb.co/2qMfSb4/image1.png"/>
               </div>
               <div className="mt-12">
                 <h3 className="text-xl mb-4">8. Select "Connect with Stripe" button</h3>
+                <p className="mb-4">
+                  Stripe powers the transfer of money from GiveButter to your bank account.
+                </p>
                 <HCImage src="https://i.ibb.co/BP2tYnG/image19.png"/>
               </div>
               <div className="mt-12">
@@ -67,22 +76,32 @@ export default class GiveButter extends React.Component {
               </div>
               <div className="mt-12">
                 <h3 className="text-xl mb-4">12. Invite Benefact to "Users" (Account Settings <i className="bi-arrow-right"></i> Users)</h3>
+                <p className="mb-4">
+                  Please invite <font className="text-green-400 underline">kevin@benefact.co</font> as an Editor to your account.
+                  This gives us the capability to create and edit your GiveButter campaign page.
+                </p>
                 <HCImage src="https://i.ibb.co/9Vw9xcG/image8.png"/>
               </div>
               <div className="mt-12">
                 <h3 className="text-xl mb-4">13. Enable recurring payments (Recurring Payments tab)</h3>
+                <p className="mb-4">
+                  By enabling this Recurring Payments, you'll allow donors to donate on a recurring basis, such as monthly or yearly donations.
+                </p>
                 <HCImage src="https://i.ibb.co/b3YgXw9/image20.png"/>
               </div>
               <div className="mt-12">
                 <h3 className="text-xl mb-4">14. Enable contacts (Contacts tab)</h3>
+                <p className="mb-4">
+                  By enabling Contacts, the contact info of your donors will be saved, allowing you to reach out to them in the future.
+                </p>
                 <HCImage src="https://i.ibb.co/QXTskJY/image10.png"/>
               </div>
               <div className="mt-12">
-                <h3 className="text-xl mb-4">15. Update account details (Account Settings <i className="bi-arrow-right"></i> About)</h3>
+                <h3 className="text-xl mb-4">15. Personalize your account (Account Settings <i className="bi-arrow-right"></i> About)</h3>
                 <HCImage src="https://i.ibb.co/fHyYmPD/image9.png"/>
               </div>
               <div className="mt-12">
-                <h3 className="text-xl mb-4">16. Update branding (Account Settings <i className="bi-arrow-right"></i> Branding)</h3>
+                <h3 className="text-xl mb-4">16. Add your logo and cover photo (Account Settings <i className="bi-arrow-right"></i> Branding)</h3>
                 <HCImage src="https://i.ibb.co/svxMhnW/image11.png"/>
               </div>
               <div className="mt-12">
