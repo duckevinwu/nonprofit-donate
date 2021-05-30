@@ -241,10 +241,10 @@ export default class DemoCampaign extends React.Component {
 
           <div className="sticky navbar flex" ref={this.stickyNav}>
             <div className="nav-tabs container mx-auto px-3 lg:px-5 flex items-center">
-              <label htmlFor="tab1" id="tab1-label" onClick={this.handleTabChange} className="tab1-icon">Mission</label>
-              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">How It Works</label>
-              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Fundraising Resources</label>
-              <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Community</label>
+              <label htmlFor="tab1" id="tab1-label" onClick={this.handleTabChange} className="tab1-icon">Why fundraise for us?</label>
+              <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">How it works</label>
+              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Resources for you</label>
+              <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Join our community</label>
               <div className={`ml-auto hidden lg:flex lg:${this.state.hidden}`}>
                 <button onClick={this.openModal} className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
               </div>
@@ -369,7 +369,7 @@ export default class DemoCampaign extends React.Component {
             </section>
             <section id="tab3" className="tab-panel min-h-100vh or-section">
               <div className="container mx-auto px-3 lg:px-5 pb-12 pt-20">
-                <OnlineResourcesSimple />
+                <OnlineResourcesSimple className="mt-12"/>
               </div>
             </section>
             <section id="tab4" className="tab-panel min-h-100vh">

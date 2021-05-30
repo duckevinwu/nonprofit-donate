@@ -18,7 +18,7 @@ import DemoCampaign from './campaigns/DemoCampaign.js';
 // help center
 import HelpCenter from './helpcenter/HelpCenter';
 import CampaignTypes from './helpcenter/pages/CampaignTypes';
-import Payout from './helpcenter/pages/Payout';
+import PayoutPilot from './helpcenter/pages/PayoutPilot';
 import GiveButter from './helpcenter/pages/GiveButter';
 
 export default class App extends React.Component {
@@ -102,7 +102,7 @@ export default class App extends React.Component {
 							exact
 							path="/help/payout"
 							render={() => (
-								<Payout />
+								<PayoutPilot />
 							)}
 						/>
 						<Route

@@ -12,13 +12,6 @@ export default class HelpCenter extends React.Component {
           <div>
             <HCCard
               className="mb-8"
-              icon="bi-question-circle"
-              title="What's the right type of campaign for you?"
-              description="Learn about the two different types of campaigns you can run and see which one might be the better fit for you."
-              redirect="/help/campaigntypes"
-            />
-            <HCCard
-              className="mb-8"
               icon="bi-cash-stack"
               title="Payouts"
               description="Everything you need to know about payouts, including when and how you'll be paid."

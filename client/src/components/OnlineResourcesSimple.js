@@ -6,6 +6,9 @@ import EmailTemplate from './templates/EmailTemplate.js';
 import TextMessageTemplate from './templates/TextMessageTemplate.js';
 import TwitterTemplate from './templates/TwitterTemplate.js';
 
+// import svgs
+import resources from '../assets/resources.svg';
+
 export default class OnlineResourcesSimple extends React.Component {
   render() {
     return (
@@ -28,13 +31,13 @@ export default class OnlineResourcesSimple extends React.Component {
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 lg:mt-0">
+          <div className="w-full lg:w-1/2 lg:mt-0 mt-12">
             <div className="flex flex-col items-center">
-              <div></div>
+              <div className="flex justify-center"><img className="w-3/5" src={resources} alt="ideas"/></div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center mt-36">
+        <div className="flex flex-col lg:flex-row items-center mt-24 lg:mt-48">
           <div className="w-full lg:w-1/2">
             <div className="lg:w-11/12">
               <div className="flex items-center">

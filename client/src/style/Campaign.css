@@ -130,7 +130,7 @@ Styling
  /* background-color: rgba(236, 253, 245, 1); */
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 770px) {
   .nav-tabs > label {
     margin-right: 0;
   }

@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import '../style/LandingPage.css';
 import CycleSelect from './CycleSelect';
 import Navbar from './Navbar';
+import RevenueCalulator from './RevenueCalculator';
 
 // import svgs
 import hero from '../assets/hero.svg';
@@ -75,7 +76,7 @@ class LandingPage extends React.Component {
             <div className="pt-6 lg:flex lg:items-center">
               <div className="lg:w-1/2 lg:flex lg:justify-center">
                 <div className="flex flex-col">
-                  <h2 className="questrial font-bold text-white text-3xl">We all know what's wrong</h2>
+                  <h2 className="questrial font-bold text-white text-4xl">We all know what's wrong</h2>
                   <p className="text-gray-300 border-l-4 border-gray-300 pl-2 mt-6">
                     Nonprofits are doing crucial work for society, but they are underfunded.
                   </p>
@@ -91,7 +92,7 @@ class LandingPage extends React.Component {
             <div className="mt-24 lg:flex lg:flex-row-reverse lg:items-center">
               <div className="lg:w-1/2 lg:flex lg:justify-center">
                 <div className="flex flex-col">
-                  <h2 className="questrial font-bold text-white text-3xl">Benefact solves both problems</h2>
+                  <h2 className="questrial font-bold text-white text-4xl">Benefact solves both problems</h2>
                   <p className="text-gray-300 border-l-4 border-gray-300 pl-2 mt-6">
                     We enable anyone to fundraise for nonprofits and get paid to do so.
                   </p>
@@ -110,7 +111,7 @@ class LandingPage extends React.Component {
         <section className="mb-12">
           <div className="container mx-auto px-3 pt-12 lg:px-5">
             <h3 className="questrial uppercase text-gray-600 tracking-widest">For anyone</h3>
-            <h2 className="questrial text-3xl mt-6 mb-12 font-bold">Support amazing nonprofits and earn money.</h2>
+            <h2 className="questrial text-4xl mt-6 mb-12 font-bold">Support amazing nonprofits and earn money.</h2>
             <CycleSelect className="hidden lg:flex"/>
             <div className="lg:hidden flex flex-col">
               <div className="pb-12">
@@ -157,10 +158,15 @@ class LandingPage extends React.Component {
             </a>
           </div>
         </section>
+        <section className="bg-gray-100">
+          <div className="container mx-auto px-3 lg:px-5 pt-16 pb-12 flex justify-center">
+            <RevenueCalulator className="lg:w-1/2 md:w-2/3 w-full"/>
+          </div>
+        </section>
         <section id="nonprofits" className="bg-green-50 pt-12">
           <div className="container mx-auto px-3 lg:px-5">
             <h3 className="questrial uppercase text-gray-600 tracking-widest">For nonprofits</h3>
-            <h2 className="questrial text-3xl mt-6 mb-12 font-bold">Raise money effortlessly.</h2>
+            <h2 className="questrial text-4xl mt-6 mb-12 font-bold">Raise money effortlessly.</h2>
             <div className="flex flex-col lg:flex-row">
               <div className="pb-12 lg:w-1/3 lg:pr-4">
                 <img className="w-28 h-28" src={work} alt="work"></img>
