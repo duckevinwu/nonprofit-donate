@@ -1,5 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '../style/LandingPage.css';
 import CycleSelect from './CycleSelect';
 import Navbar from './Navbar';
@@ -43,6 +45,13 @@ class LandingPage extends React.Component {
     })
   }
 
+  componentDidMount() {
+    AOS.init({
+      disable: 'mobile',
+      duration: 1000
+    })
+  }
+
   render() {
     return (
       <>
@@ -52,7 +61,7 @@ class LandingPage extends React.Component {
             <div className="hero-info-container flex items-center justify-center">
               <div className="flex flex-col items-center lg:flex-row">
                 <div className="text-center lg:text-left lg:mr-10 mb-16 lg:mb-0 flex items-center lg:w-1/2">
-                  <div>
+                  <div data-aos="fade-right">
                     <h1 className="text-4xl md:text-5xl questrial mb-6 font-bold">Get paid to <font className="text-green-400 questrial">help nonprofits</font></h1>
                     <p className="sm:text-lg leading-relaxed mb-6 text-gray-800">
                       Benefact is where anyone can get paid to raise money for nonprofits.
@@ -63,7 +72,7 @@ class LandingPage extends React.Component {
                   </div>
                 </div>
                 <div className="flex items-center justify-center lg:w-1/2">
-                  <img alt="hero" src={hero} className="hero-image"></img>
+                  <img data-aos="zoom-in" alt="hero" src={hero} className="hero-image"></img>
                 </div>
               </div>
             </div>
@@ -73,7 +82,7 @@ class LandingPage extends React.Component {
         <section className="bg-black">
           <div className="container mx-auto px-3 py-12 lg:px-5">
             <h1 className="questrial uppercase text-gray-400 tracking-widest">Our solution</h1>
-            <div className="pt-6 lg:flex lg:items-center">
+            <div className="pt-6 lg:flex lg:items-center" data-aos="fade-up">
               <div className="lg:w-1/2 lg:flex lg:justify-center">
                 <div className="flex flex-col">
                   <h2 className="questrial font-bold text-white text-4xl">We all know what's wrong</h2>
@@ -89,7 +98,7 @@ class LandingPage extends React.Component {
                 <img className="mt-8 lg:mt-0 solution-image" src={problem} alt="problem"></img>
               </div>
             </div>
-            <div className="mt-24 lg:flex lg:flex-row-reverse lg:items-center">
+            <div className="mt-24 lg:flex lg:flex-row-reverse lg:items-center" data-aos="fade-up" data-aos-delay="500">
               <div className="lg:w-1/2 lg:flex lg:justify-center">
                 <div className="flex flex-col">
                   <h2 className="questrial font-bold text-white text-4xl">Benefact solves both problems</h2>
@@ -168,21 +177,21 @@ class LandingPage extends React.Component {
             <h3 className="questrial uppercase text-gray-600 tracking-widest">For nonprofits</h3>
             <h2 className="questrial text-4xl mt-6 mb-12 font-bold">Raise money effortlessly.</h2>
             <div className="flex flex-col lg:flex-row">
-              <div className="pb-12 lg:w-1/3 lg:pr-4">
+              <div className="pb-12 lg:w-1/3 lg:pr-4" data-aos="fade-up">
                 <img className="w-28 h-28" src={work} alt="work"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">We handle everything</h3>
                   <p className="mt-2 text-gray-600">We will create your online campaign, pay your fundraisers, and deliver your donations straight to your bank account</p>
                 </div>
               </div>
-              <div className="pb-12 lg:w-1/3 lg:pr-4">
+              <div className="pb-12 lg:w-1/3 lg:pr-4" data-aos="fade-up" data-aos-delay="500">
                 <img className="w-28 h-28" src={free} alt="free"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Zero risk</h3>
                   <p className="mt-2 text-gray-600">We only get paid if you raise money. So if you don’t raise money through our platform, then you won’t pay us a dime</p>
                 </div>
               </div>
-              <div className="pb-12 lg:w-1/3">
+              <div className="pb-12 lg:w-1/3" data-aos="fade-up" data-aos-delay="1000">
                 <img className="w-28 h-28" src={community} alt="community"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Engage the community</h3>

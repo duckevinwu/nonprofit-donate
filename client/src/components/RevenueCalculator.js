@@ -38,14 +38,20 @@ export default class RevenueCalulator extends React.Component {
             <p className="ml-auto text-lg">{`$${this.state.raised}`}</p>
           </div>
           <div className="slidecontainer mt-2">
-            <input className="slider" type="range" min="0" max="10000" value={this.state.sliderValue} onChange={this.handleSliderChange}/>
+            <input className="slider" type="range" min="0" max="20000" value={this.state.sliderValue} onChange={this.handleSliderChange}/>
           </div>
         </div>
-        <div className="my-12">
+        <div className="mt-12 mb-6">
           <h4 className="text-3xl questrial mb-6">Your payout</h4>
           <div className="p-6 shadow-lg bg-black rounded-md">
             <p className="text-green-400 text-6xl">{`$${this.state.earned}`}</p>
           </div>
+        </div>
+        <div className="mb-12">
+          <p className="text-sm text-gray-500 sm:mx-6">
+            *This calculator only goes up to $20,000 raised, but that is in no way a limit.
+            You can certainly raise more than this and thus earn more as well.
+          </p>
         </div>
         <a href="/nonprofits">
           <button className="transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">Get started <i className="bi-chevron-right ml-6"></i></button>

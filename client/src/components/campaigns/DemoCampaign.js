@@ -255,7 +255,7 @@ export default class DemoCampaign extends React.Component {
               <div className="container mx-auto px-3 lg:px-5">
                 <div className="flex justify-center">
                   <div className="flex flex-col lg:w-1/2 md:w-3/4 w-full mt-20 mb-12">
-                    <h3 className="mb-8 questrial text-5xl tracking-wide font-bold">Get paid to <font className="text-green-500 questrial">Free the Food</font> with Sharing Excess</h3>
+                    <h3 className="mb-12 questrial text-5xl tracking-wide font-bold">Get paid to <font className="text-green-500 questrial">Free the Food</font> with Sharing Excess</h3>
                     <LazyLoadImage
                       alt={"se-cover"}
                       src={'https://i.ibb.co/tYtZ8tQ/image1.png'}
