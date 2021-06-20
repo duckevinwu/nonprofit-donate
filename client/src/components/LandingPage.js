@@ -61,7 +61,7 @@ class LandingPage extends React.Component {
             <div className="hero-info-container flex items-center justify-center">
               <div className="flex flex-col items-center lg:flex-row">
                 <div className="text-center lg:text-left lg:mr-10 mb-16 lg:mb-0 flex items-center lg:w-1/2">
-                  <div data-aos="fade-right">
+                  <div>
                     <h1 className="text-4xl md:text-5xl questrial mb-6 font-bold">Get paid to <font className="text-green-400 questrial">help nonprofits</font></h1>
                     <p className="sm:text-lg leading-relaxed mb-6 text-gray-800">
                       Benefact is where anyone can get paid to raise money for nonprofits.
