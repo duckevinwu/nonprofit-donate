@@ -38,7 +38,7 @@ export default class ContactForm extends React.Component {
   sendMessage(e) {
     e.preventDefault();
     console.log(this.state);
-    fetch("https://formsubmit.co/ajax/kevin@benefact.co", {
+    fetch("https://formsubmit.co/ajax/c15041a7ad9190badc2fc81feea9efb4", {
       method: "POST",
       headers: {
           'Content-Type': 'application/json',
