@@ -41,9 +41,9 @@ export default class TwitterTemplate extends React.Component {
       <div className={`${this.props.className} border shadow-lg email-template rounded-xl bg-white`}>
         <div className="flex flex-col">
           <div className="flex items-center p-2">
-            <img className="w-16 h-16 rounded-full object-cover" alt="facebook-template-profile" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png"/>
-            <div className="flex flex-col ml-2">
-              <p className="font-bold text-sm">First Last</p>
+            <img className="w-16 h-16 rounded-full object-cover" alt="facebook-template-profile" src="https://i.ibb.co/kDz99sD/11376232021.jpg"/>
+            <div className="flex flex-col ml-3">
+              <p className="font-bold text-md">First Last</p>
               <p className="text-gray-600 text-sm">@firstlast</p>
             </div>
           </div>

@@ -109,7 +109,10 @@ export default class DemoCampaign extends React.Component {
                 {this.state.coverVideo}
                 <div className="text-4xl sm:text-5xl questrial font-bold mt-8 tracking-wide">Let's free food</div>
                 <div className="mt-2">
-                  Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia. We are striving to hit 3 million pounds of food donated by November of 2021, and we can’t do it without your support!
+                  Sharing Excess is on a mission to bridge the gap between food excess and scarcity. By partnering with grocery stores, restaurants, and wholesalers, we are able to efficiently deliver surplus food to a network of community organizations aimed at alleviating local food insecurity.
+                  <br/>
+                  <br/>
+                  For every dollar that is raised we are able to deliver 10 pounds of food (approximately 8 meals) to community members in need. Your contribution will help us address the reality that 126 billion pounds of food is wasted every year, while over 40 million Americans continue to face food insecurity.
                 </div>
                 <div className="flex flex-col md:flex-row md:mt-8">
                   <div className="my-8 md:my-0 md:w-1/2 md:mr-4">
@@ -166,14 +169,17 @@ export default class DemoCampaign extends React.Component {
             </div>
             <div className="hidden lg:flex">
               <div className="flex flex-col">
-                <div className="flex items-center">
-                  <div className="flex flex-col w-3/4 mr-6">
+                <div className="flex">
+                  <div className="flex flex-col w-2/3 mr-6">
                     <div className="text-6xl questrial font-bold tracking-wide">Let's free food</div>
                     <div className="mt-4">
-                      Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia. We are striving to hit 3 million pounds of food donated by November of 2021, and we can’t do it without your support!
+                      Sharing Excess is on a mission to bridge the gap between food excess and scarcity. By partnering with grocery stores, restaurants, and wholesalers, we are able to efficiently deliver surplus food to a network of community organizations aimed at alleviating local food insecurity.
+                      <br/>
+                      <br/>
+                      For every dollar that is raised we are able to deliver 10 pounds of food (approximately 8 meals) to community members in need. Your contribution will help us address the reality that 126 billion pounds of food is wasted every year, while over 40 million Americans continue to face food insecurity.
                     </div>
                   </div>
-                  <a href="https://www.sharingexcess.com" target="_blank" rel="noopener noreferrer" className="w-1/4">
+                  <a href="https://www.sharingexcess.com" target="_blank" rel="noopener noreferrer" className="w-1/3">
                     <div className="transition border rounded shadow w-full hover:shadow-lg">
                       <div className="flex flex-col p-3">
                         <div>
@@ -265,14 +271,13 @@ export default class DemoCampaign extends React.Component {
                     />
                     <div className="mt-8 text-lg">
                       <p className="">
-                        80 billion tons of food are wasted each year. Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia.
-                        As of early 2021, we have rescued and donated a total of 2.2 million pounds of food.
-                        We are striving to hit 3 million pounds by the end of the year, and we can’t do it without Advocates like you!
+                        In the United States, over 120 billion pounds of food ends up in landfills each year; enough to fill more than 700 NFL stadiums from the ground to the very top with uneaten food.
+                        All the while, upwards of 40 million Americans experience food insecurity in our country.
                       </p>
                       <p className="mt-6">
-                        By becoming an Advocate, you’ll get paid to fundraise for us.
-                        But this is so much more than another income stream for you — every dollar you raise amounts to 8 meals for families in need!
-                        You’ll be making a direct impact on the lives of families in Philadelphia while getting compensated for your time and effort — it’s a win-win.
+                        Sharing Excess aims to solve this broken equation with innovative last-mile delivery, and big ideas that spread love, happiness, and compassion.
+                        To date, Sharing Excess has provided 3 million meals for Philadelphians.
+                        We hope to hit 4 million meals by the end of this year and we cannot do it without you!
                       </p>
                     </div>
                     <LazyLoadImage
@@ -284,11 +289,9 @@ export default class DemoCampaign extends React.Component {
                     />
                     <div className="text-lg">
                       <p className="">
-                        The best part? Anyone can become an Advocate — no experience needed.
-                        Our Advocates are students, teachers, community members, public servants, moms, dads — anyone who wants to make a difference.
-                        No matter who you are, we will teach you how to fundraise in ways that suit your personality and interests.
-                        Some Advocates will fundraise remotely (emails, social media posts, text messages), others will leverage special events (birthdays, weddings, holidays), and some may get really creative (“donate to Sharing Excess and I’ll bike across Pennsylvania!”).
-                        Whatever your style, we have a huge library of fundraising ideas and a lively community to support you.
+                        By becoming an Advocate, you’ll get paid to fundraise for us.
+                        But this is so much more than another income stream for you — every dollar you raise amounts to 8 meals for families in need!
+                        You’ll be making a direct impact on the lives of families in Philadelphia while getting compensated for your time and effort — it’s a win-win.
                       </p>
                     </div>
                     <div className="border-l-6 border-black pl-3 my-8">
@@ -357,7 +360,7 @@ export default class DemoCampaign extends React.Component {
                     <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
                       <p className="text-gray-600">
                         At the end of your campaign, Benefact will pay you directly.
-                        We'll also send you an Impact Report detailing the amount of money you raised and the impact that you made on Sharing Excess.
+                        We'll also send you an Impact Report detailing the amount of money you raised and the impact that you made with Sharing Excess.
                       </p>
                       <a href="/help/payout" target="_blank">
                         <button className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Learn about payouts <i className="bi-chevron-right"></i></button>
@@ -378,26 +381,19 @@ export default class DemoCampaign extends React.Component {
                   <div className="flex flex-col w-full lg:w-10/12">
                     <h2 className="questrial font-bold text-5xl mb-4">Our commmunity is here to support you</h2>
                     <p className="">
-                      We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat, register for our (optional) Kickoff Session, and/or sign up for a one-on-one chat!
+                      We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat or sign up for a one-on-one chat!
                       In our Discord, you can ask questions to our Advocate community, discover unique fundraising ideas, and chat with the Benefact admin team.
-                      In our Kickoff Session, you’ll learn about how Benefact works and the lifecycle of our campaigns.
-                      And if you have more direct questions, the one-on-one session is perfect for you.
+                      If you have more direct questions, the one-on-one session is perfect for you.
                     </p>
-                    <div className="grid lg:grid-cols-3 gap-4 my-12">
+                    <div className="grid lg:grid-cols-2 gap-4 my-12">
                       <a href="https://discord.gg/WVDEebeFpt" target="_blank" rel="noopener noreferrer">
-                        <div className="bg-indigo-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
+                        <div className="bg-indigo-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-200 cursor-pointer flex flex-col items-center">
                           <i className="text-white bi-discord text-4xl mb-3"></i>
                           <p className="text-center text-white text-xl questrial">Join our Discord</p>
                         </div>
                       </a>
-                      <a href="https://www.eventbrite.com/e/sharing-excess-kickoff-tickets-155432884943" target="_blank" rel="noopener noreferrer">
-                        <div className="bg-green-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
-                          <i className="text-white bi-camera-video text-4xl mb-3"></i>
-                          <p className="text-center text-white text-xl questrial">Register for Kickoff Session</p>
-                        </div>
-                      </a>
                       <a href="https://calendly.com/benefact/1-on-1?month=2021-05" target="_blank" rel="noopener noreferrer">
-                        <div className="bg-red-400 p-4 rounded-lg shadow-md hover:bg-black transition duration-150 cursor-pointer flex flex-col items-center">
+                        <div className="bg-red-400 p-4 rounded-lg shadow-md hover:bg-black transition duration-200 cursor-pointer flex flex-col items-center">
                           <i className="text-white bi-calendar-event text-4xl mb-3"></i>
                           <p className="text-center text-white text-xl questrial">Sign up for one-on-one</p>
                         </div>

@@ -59,7 +59,7 @@ export default class EmailTemplate extends React.Component {
             <div className="mt-3"></div>
             <p>I know this is a little out of the blue, but I’m running a fundraising campaign for Sharing Excess and I was wondering if you’d be willing to chip in?</p>
             <div className="mt-3"></div>
-            <p>Sharing Excess is a nonprofit that rescues wasted food in Philadelphia and donates it to those in need. They’ve rescued 2.2 million pounds of food to date, and your donation would help them reach 3 million pounds by the end of the year!</p>
+            <p>Sharing Excess is a nonprofit that rescues wasted food in Philadelphia and donates it to those in need. They’ve rescued 3 million pounds of food to date, and your donation would help them reach 4 million pounds by the end of the year!</p>
             <div className="mt-3"></div>
             <p>Their mission means a bunch to me, as I’ve seen dozens of hungry families in Philly, and I figured that you might care enough to chip in as well. Every dollar donated equates to 8 meals for families in need.</p>
             <div className="mt-3"></div>
