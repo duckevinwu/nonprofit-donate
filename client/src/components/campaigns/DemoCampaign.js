@@ -6,7 +6,9 @@ import '../../style/Tooltip.css';
 import '../../style/Modal.css';
 
 import OnlineResourcesSimple from '../OnlineResourcesSimple.js';
-import ContactForm from '../ContactForm.js';
+
+// import svgs
+import community from '../../assets/community.svg';
 
 export default class DemoCampaign extends React.Component {
   constructor(props) {
@@ -377,31 +379,39 @@ export default class DemoCampaign extends React.Component {
             </section>
             <section id="tab4" className="tab-panel min-h-100vh">
               <div className="container mx-auto px-3 lg:px-5 py-12">
-                <div className="flex justify-center mb-12">
-                  <div className="flex flex-col w-full lg:w-10/12">
-                    <h2 className="questrial font-bold text-5xl mb-4">Our commmunity is here to support you</h2>
-                    <p className="">
-                      We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat or sign up for a one-on-one chat!
-                      In our Discord, you can ask questions to our Advocate community, discover unique fundraising ideas, and chat with the Benefact admin team.
-                      If you have more direct questions, the one-on-one session is perfect for you.
-                    </p>
-                    <div className="grid lg:grid-cols-2 gap-4 my-12">
-                      <a href="https://discord.gg/WVDEebeFpt" target="_blank" rel="noopener noreferrer">
-                        <div className="bg-indigo-500 p-4 rounded-lg shadow-md hover:bg-black transition duration-200 cursor-pointer flex flex-col items-center">
-                          <i className="text-white bi-discord text-4xl mb-3"></i>
-                          <p className="text-center text-white text-xl questrial">Join our Discord</p>
-                        </div>
-                      </a>
-                      <a href="https://calendly.com/benefact/1-on-1?month=2021-05" target="_blank" rel="noopener noreferrer">
-                        <div className="bg-red-400 p-4 rounded-lg shadow-md hover:bg-black transition duration-200 cursor-pointer flex flex-col items-center">
-                          <i className="text-white bi-calendar-event text-4xl mb-3"></i>
-                          <p className="text-center text-white text-xl questrial">Sign up for one-on-one</p>
-                        </div>
-                      </a>
+                <div className="flex justify-center">
+                  <img src={community} alt="community" className="lg:w-1/2"></img>
+                </div>
+                <div className="flex justify-center">
+                  <div className="flex flex-col w-full lg:w-3/4 px-4 sm:px-8 py-8 rounded-md shadow-lg bg-gray-50 bg-opacity-90 mt-12 sm:-mt-24">
+                    <h2 className="questrial font-bold text-4xl lg:text-5xl mb-4 text-center">Our <font className="text-green-400 questrial">commmunity</font> is here to support you</h2>
+                    <div className="my-4">
+                      <p className="text-md">
+                        We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat or sign up for a one-on-one chat!
+                        In our Discord, you can ask questions to our Advocate community, discover unique fundraising ideas, and chat with the Benefact admin team.
+                        If you have more direct questions, the one-on-one session is perfect for you.
+                      </p>
+                      <p className="mt-3">In the meantime, if you have a quick question or comment, click the bubble in the bottom right to chat with us now!</p>
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="grid sm:grid-cols-2 gap-6 mt-6 md:w-3/4">
+                        <a href="https://discord.gg/WVDEebeFpt" target="_blank" rel="noopener noreferrer">
+                          <div className="bg-indigo-500 p-4 rounded-lg shadow-lg hover:bg-black transition duration-200 cursor-pointer flex items-center justify-center">
+                            <i className="text-white bi-discord text-4xl mr-3"></i>
+                            <p className="text-center text-white text-xl questrial">Join our Discord</p>
+                          </div>
+                        </a>
+                        <a href="https://calendly.com/benefact/1-on-1?month=2021-05" target="_blank" rel="noopener noreferrer">
+                          <div className="bg-red-400 p-4 rounded-lg shadow-lg hover:bg-black transition duration-200 cursor-pointer flex items-center justify-center">
+                            <i className="text-white bi-calendar-event text-4xl mr-3"></i>
+                            <p className="text-center text-white text-xl questrial">Sign up for 1-on-1</p>
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <ContactForm/>
+
               </div>
             </section>
           </div>
