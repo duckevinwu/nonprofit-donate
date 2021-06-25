@@ -98,7 +98,7 @@ class LandingPage extends React.Component {
                 <img className="mt-8 lg:mt-0 solution-image" src={problem} alt="problem"></img>
               </div>
             </div>
-            <div className="mt-24 lg:flex lg:flex-row-reverse lg:items-center" data-aos="fade-up" data-aos-delay="500">
+            <div className="mt-24 lg:flex lg:flex-row-reverse lg:items-center" data-aos="fade-up" data-aos-delay="250">
               <div className="lg:w-1/2 lg:flex lg:justify-center">
                 <div className="flex flex-col">
                   <h2 className="questrial font-bold text-white text-4xl">Benefact solves both problems</h2>
@@ -184,14 +184,14 @@ class LandingPage extends React.Component {
                   <p className="mt-2 text-gray-600">We will create your online campaign, pay your fundraisers, and deliver your donations straight to your bank account</p>
                 </div>
               </div>
-              <div className="pb-12 lg:w-1/3 lg:pr-4" data-aos="fade-up" data-aos-delay="500">
+              <div className="pb-12 lg:w-1/3 lg:pr-4" data-aos="fade-up" data-aos-delay="250">
                 <img className="w-28 h-28" src={free} alt="free"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Zero risk</h3>
                   <p className="mt-2 text-gray-600">We only get paid if you raise money. So if you don’t raise money through our platform, then you won’t pay us a dime</p>
                 </div>
               </div>
-              <div className="pb-12 lg:w-1/3" data-aos="fade-up" data-aos-delay="1000">
+              <div className="pb-12 lg:w-1/3" data-aos="fade-up" data-aos-delay="500">
                 <img className="w-28 h-28" src={community} alt="community"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Engage the community</h3>
