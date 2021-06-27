@@ -14,6 +14,7 @@ import IdeaBank from './IdeaBank';
 
 // campaigns
 import DemoCampaign from './campaigns/DemoCampaign.js';
+import SharingExcess from './campaigns/SharingExcess.js';
 
 // help center
 import HelpCenter from './helpcenter/HelpCenter';
@@ -75,6 +76,13 @@ export default class App extends React.Component {
 							path="/demo"
 							render={() => (
 								<DemoCampaign />
+							)}
+						/>
+						<Route
+							exact
+							path="/nonprofits/sharingexcess"
+							render={() => (
+								<SharingExcess />
 							)}
 						/>
 						<Route
