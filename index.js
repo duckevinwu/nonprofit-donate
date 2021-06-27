@@ -25,6 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 // routes.getAllPeople, specified in routes.js.
 app.get('/api/test/campaign', routes.getTestCampaign);
 app.get('/api/nonprofits/:index', routes.getNonprofits);
+app.get('/api/nonprofit/:id', routes.getNonprofit);
 
 /* ---- Part 2 (FindFriends) ---- */
 // TODO: (2) - Add route '/friends/:login' for the functionality of FindFriends page

@@ -25,7 +25,9 @@ export default class DemoCampaign extends React.Component {
       logoImageUrl: '',
       hidden: 'hidden',
       coverVideo: videoEmbed,
-      advocateModal: 'modal-closed'
+      advocateModal: 'modal-closed',
+      isLoaded: false,
+      nonprofitObj: {}
     }
 
     this.stickyNav = React.createRef();
@@ -89,6 +91,24 @@ export default class DemoCampaign extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleStickyScroll);
+    fetch("/api/nonprofit/1",
+    {
+      method: 'GET'
+    }).then(res => {
+      return res.json();
+    }, err => {
+      console.log(err);
+    }).then(nonprofitRes => {
+      const nonprofitObj = nonprofitRes.record;
+      if (!nonprofitObj) return;
+
+      this.setState({
+        nonprofitObj: nonprofitObj,
+        isLoaded: true
+      });
+    }, err => {
+      console.log(err);
+    });
   }
 
   componentWillUnmount() {
@@ -136,11 +156,19 @@ export default class DemoCampaign extends React.Component {
                     <div className="flex flex-col mb-6">
                       <div className="flex w-full mb-4">
                         <div className="mr-4 w-1/2 flex flex-col">
-                          <div className="text-lg font-semibold text-green-400 truncate">$4,000</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-lg font-semibold text-green-400 truncate">{this.state.nonprofitObj.raised}</div>
+                          :
+                          <span className="bg-gray-300 h-4 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-xs text-gray-700">raised</div>
                         </div>
                         <div className="w-1/2 mr-4 flex flex-col">
-                          <div className="text-lg font-semibold text-gray-800">24</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-lg font-semibold text-gray-800">{this.state.nonprofitObj.advocates}</div>
+                          :
+                          <span className="bg-gray-300 h-4 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-xs text-gray-700 flex">
                             <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
                               advocates
@@ -150,11 +178,19 @@ export default class DemoCampaign extends React.Component {
                       </div>
                       <div className="flex w-full">
                         <div className="w-1/2 flex flex-col">
-                          <div className="text-lg font-semibold">32,000</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-lg font-semibold">{this.state.nonprofitObj.impactAmount}</div>
+                          :
+                          <span className="bg-gray-300 h-4 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-xs text-gray-700">meals delivered</div>
                         </div>
                         <div className="w-1/2 flex flex-col">
-                          <div className="text-lg font-semibold text-gray-800">5%</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-lg font-semibold text-gray-800">{this.state.nonprofitObj.share}</div>
+                          :
+                          <span className="bg-gray-300 h-4 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-xs text-gray-700 flex">
                             <div className="border-b border-gray-400 border-dotted" data-tooltip="Benefact will pay you 5% of the total amount you fundraise">share</div>
                           </div>
@@ -181,18 +217,20 @@ export default class DemoCampaign extends React.Component {
                       For every dollar that is raised we are able to deliver 10 pounds of food (approximately 8 meals) to community members in need. Your contribution will help us address the reality that 126 billion pounds of food is wasted every year, while over 40 million Americans continue to face food insecurity.
                     </div>
                   </div>
-                  <a href="https://www.sharingexcess.com" target="_blank" rel="noopener noreferrer" className="w-1/3">
-                    <div className="transition border rounded shadow w-full hover:shadow-lg">
-                      <div className="flex flex-col p-3">
-                        <div>
-                          <img src="https://images.squarespace-cdn.com/content/5ac3e0a85417fc6763844546/1610569439154-CE22600W6FASG64C0965/IMG_6851-5.PNG?format=1500w&content-type=image%2Fpng" alt="nonprofit-logo" className="nonprofit-logo"></img>
+                  <div className="w-1/3">
+                    <a href="https://www.sharingexcess.com" target="_blank" rel="noopener noreferrer">
+                      <div className="transition border rounded shadow w-full hover:shadow-lg">
+                        <div className="flex flex-col p-3">
+                          <div>
+                            <img src="https://images.squarespace-cdn.com/content/5ac3e0a85417fc6763844546/1610569439154-CE22600W6FASG64C0965/IMG_6851-5.PNG?format=1500w&content-type=image%2Fpng" alt="nonprofit-logo" className="nonprofit-logo"></img>
+                          </div>
+                          <div className="font-bold questrial text-lg">Sharing Excess</div>
+                          <div className="text-sm text-gray-700"><i className="bi-globe"></i> sharingexcess.com</div>
+                          <div className="text-sm text-gray-700"><i className="bi-geo-alt"></i> Philadelphia, PA</div>
                         </div>
-                        <div className="font-bold questrial text-lg">Sharing Excess</div>
-                        <div className="text-sm text-gray-700"><i className="bi-globe"></i> sharingexcess.com</div>
-                        <div className="text-sm text-gray-700"><i className="bi-geo-alt"></i> Philadelphia, PA</div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
                 <div className="flex mt-12">
                   <div className="w-2/3 mr-6">
@@ -205,15 +243,27 @@ export default class DemoCampaign extends React.Component {
                       </div>
                       <div className="flex flex-col">
                         <div className="flex flex-col">
-                          <div className="text-4xl font-semibold text-green-400">$4,000</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-4xl font-semibold text-green-400">{this.state.nonprofitObj.raised}</div>
+                          :
+                          <span className="bg-gray-300 h-6 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-sm text-gray-700">raised</div>
                         </div>
                         <div className="flex flex-col mt-6">
-                          <div className="text-2xl font-semibold text-gray-800">32,000</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-2xl font-semibold text-gray-800">{this.state.nonprofitObj.impactAmount}</div>
+                          :
+                          <span className="bg-gray-300 h-6 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-sm text-gray-700">meals delivered</div>
                         </div>
                         <div className="flex flex-col mt-6">
-                          <div className="text-2xl font-semibold text-gray-800">24</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-2xl font-semibold text-gray-800">{this.state.nonprofitObj.advocates}</div>
+                          :
+                          <span className="bg-gray-300 h-6 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-sm text-gray-700 flex">
                             <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
                               advocates
@@ -221,7 +271,11 @@ export default class DemoCampaign extends React.Component {
                           </div>
                         </div>
                         <div className="flex flex-col mt-6">
-                          <div className="text-2xl font-semibold text-gray-800">5%</div>
+                          {(this.state.isLoaded) ?
+                          <div className="text-2xl font-semibold text-gray-800">{this.state.nonprofitObj.share}</div>
+                          :
+                          <span className="bg-gray-300 h-6 mt-1 mb-2 w-16 animate-pulse"></span>
+                          }
                           <div className="text-sm text-gray-700 flex">
                             <div className="border-b border-gray-400 border-dotted" data-tooltip="Benefact will pay you 5% of the total amount you fundraise">share</div>
                           </div>
@@ -251,7 +305,7 @@ export default class DemoCampaign extends React.Component {
             <div className="nav-tabs container mx-auto px-3 lg:px-5 flex items-center">
               <label htmlFor="tab1" id="tab1-label" onClick={this.handleTabChange} className="tab1-icon">Why fundraise for us?</label>
               <label htmlFor="tab2" id="tab2-label" onClick={this.handleTabChange} className="tab2-icon">How it works</label>
-              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">Resources for you</label>
+              <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">How to fundraise</label>
               <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Join our community</label>
               <div className={`ml-auto hidden lg:flex lg:${this.state.hidden}`}>
                 <button onClick={this.openModal} className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
@@ -385,26 +439,19 @@ export default class DemoCampaign extends React.Component {
                 <div className="flex justify-center">
                   <div className="flex flex-col w-full lg:w-3/4 px-4 sm:px-8 py-8 rounded-md shadow-lg bg-gray-50 bg-opacity-90 mt-12 sm:-mt-24">
                     <h2 className="questrial font-bold text-4xl lg:text-5xl mb-4 text-center">Our <font className="text-green-400 questrial">commmunity</font> is here to support you</h2>
-                    <div className="my-4">
+                    <div className="mt-4 mb-8">
                       <p className="text-md">
-                        We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord chat or sign up for a one-on-one chat!
+                        We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord server or chat with us now!
                         In our Discord, you can ask questions to our Advocate community, discover unique fundraising ideas, and chat with the Benefact admin team.
-                        If you have more direct questions, the one-on-one session is perfect for you.
+                        If you have a quick question or comment, click the bubble in the bottom right to speak with us now!
                       </p>
-                      <p className="mt-3">In the meantime, if you have a quick question or comment, click the bubble in the bottom right to chat with us now!</p>
                     </div>
                     <div className="flex justify-center">
-                      <div className="grid sm:grid-cols-2 gap-6 mt-6 md:w-3/4">
+                      <div className="">
                         <a href="https://discord.gg/WVDEebeFpt" target="_blank" rel="noopener noreferrer">
-                          <div className="bg-indigo-500 p-4 rounded-lg shadow-lg hover:bg-black transition duration-200 cursor-pointer flex items-center justify-center">
+                          <div className="bg-black py-4 px-8 rounded-lg shadow-lg hover:bg-green-400 transition duration-200 cursor-pointer flex items-center justify-center">
                             <i className="text-white bi-discord text-4xl mr-3"></i>
                             <p className="text-center text-white text-xl questrial">Join our Discord</p>
-                          </div>
-                        </a>
-                        <a href="https://calendly.com/benefact/1-on-1?month=2021-05" target="_blank" rel="noopener noreferrer">
-                          <div className="bg-red-400 p-4 rounded-lg shadow-lg hover:bg-black transition duration-200 cursor-pointer flex items-center justify-center">
-                            <i className="text-white bi-calendar-event text-4xl mr-3"></i>
-                            <p className="text-center text-white text-xl questrial">Sign up for 1-on-1</p>
                           </div>
                         </a>
                       </div>

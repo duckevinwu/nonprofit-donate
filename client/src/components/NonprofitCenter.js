@@ -2,15 +2,23 @@ import React from 'react';
 import NonprofitCard from './NonprofitCard';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Preloader from './Preloader';
 import '../style/NonprofitCenter.css';
 
 // import svgs
 import discover from '../assets/discover.svg';
 
 export default class NonprofitCenter extends React.Component {
-  
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoaded: false,
+      nonprofits: []
+    }
+  }
+
   componentDidMount() {
-    /*
     fetch("/api/nonprofits/1",
     {
       method: 'GET'
@@ -18,25 +26,36 @@ export default class NonprofitCenter extends React.Component {
       return res.json();
     }, err => {
       console.log(err);
-    }).then(nonprofitList => {
-      console.log(nonprofitList);
-      // Map each attribute of a person in this.state.people to an HTML element
-      // let peopleDivs = peopleList.map((person, i) =>
-      // <div key={i} className="person">
-      //   <div className="login">{person.login}</div>
-      //   <div className="name">{person.name}</div>
-      //   <div className="birthyear">{person.birthyear}</div>
-      // </div>);
+    }).then(nonprofitRes => {
+      const nonprofitObj = nonprofitRes.records;
+      const nonprofitDivs = [];
+      for (const id in nonprofitObj) {
+        const nonprofit = nonprofitObj[id];
+        nonprofitDivs.push(
+          <NonprofitCard
+            key={id}
+            id={id}
+            name={nonprofit.name}
+            description={nonprofit.description}
+            imageUrl={nonprofit.imageUrl}
+            geoLocation={nonprofit.location}
+            raised={nonprofit.raised}
+            impactAmount={nonprofit.impactAmount}
+            impactMetric={nonprofit.impactMetric}
+            advocates={nonprofit.advocates}
+            share={nonprofit.share}
+            redirect={nonprofit.redirect}
+          />
+        )
+      }
 
-      // Set the state of the person list to the value returned by the HTTP response from the server.
-      // this.setState({
-      //   people: peopleDivs
-      // });
+      this.setState({
+        nonprofits: nonprofitDivs,
+        isLoaded: true
+      });
     }, err => {
-      // Print the error if there is one.
       console.log(err);
     });
-    */
   }
 
   render() {
@@ -65,20 +84,9 @@ export default class NonprofitCenter extends React.Component {
             <div className="flex w-full justify-center mb-12">
               <h1 className="questrial uppercase text-lg text-gray-700 tracking-widest">Our Nonprofit Partners</h1>
             </div>
+            <Preloader className={`${(this.state.isLoaded) ? 'hidden' : ''} h-36`}/>
             <div className="grid justify-center gap-8 nonprofit-grid">
-              <NonprofitCard
-                id="1"
-                name="Sharing Excess"
-                description="Sharing Excess rescues wasted food from local businesses and delivers it to at-risk community members in Philadelphia. We are striving to hit 3 million pounds of food donated by November of 2021, and we can’t do it without your support!"
-                imageUrl="https://i.ibb.co/tYtZ8tQ/image1.png"
-                geoLocation="Philadelphia, PA"
-                raised="$4,000"
-                impactAmount="32,000"
-                impactMetric="meals delivered"
-                advocates="23"
-                share="5%"
-                redirect="/demo"
-              />
+              {this.state.nonprofits}
             </div>
           </div>
         </section>

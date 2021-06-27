@@ -42,6 +42,13 @@ function getNonprofits(req, res) {
   getRecords(res, true, startIndex, 0);
 }
 
+function getNonprofit(req, res) {
+  let id = req.params.id;
+  if (!id) res.json({status: 'fail', message: 'invalid nonprofit id'});
+  let cacheIndex = Math.floor(id / 100) + 1;
+  getRecords(res, false, cacheIndex, id);
+}
+
 // get correct chunk of records from Airtable and cache result
 function getRecords(res, isChunk, startIndex, exactIndex) {
   let cacheNonprofits = apiCache.get(`nonprofits-${startIndex}`);
@@ -68,12 +75,12 @@ function getRecords(res, isChunk, startIndex, exactIndex) {
         apiRecords[record.get("id")] = record.fields;
       });
 
-      let setCache = apiCache.set(`nonprofits-${startIndex}`, apiRecords, 30);
+      let setCache = apiCache.set(`nonprofits-${startIndex}`, apiRecords, 60);
       if (setCache) {
         if (isChunk) {
           res.json({status: 'success', cache: 'no', records: apiRecords})
         } else {
-          res.json({status: 'success', cache: 'no', records: apiRecords[exactIndex]})
+          res.json({status: 'success', cache: 'no', record: apiRecords[exactIndex]})
         }
       } else {
         res.json({status: 'fail', message: 'error setting cache'})
@@ -85,7 +92,8 @@ function getRecords(res, isChunk, startIndex, exactIndex) {
 // The exported functions, which can be accessed in index.js.
 module.exports = {
   getTestCampaign: getTestCampaign,
-  getNonprofits: getNonprofits
+  getNonprofits: getNonprofits,
+  getNonprofit: getNonprofit
 }
 
 

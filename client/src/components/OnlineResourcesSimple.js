@@ -17,15 +17,19 @@ export default class OnlineResourcesSimple extends React.Component {
           <div className="w-full lg:w-1/2">
             <div className="lg:w-11/12">
               <div className="flex items-center">
-                <h2 className="lg:text-white text-4xl lg:text-5xl questrial font-bold">Fundraising Resources</h2>
+                <h2 className="lg:text-white text-4xl lg:text-5xl questrial font-bold">How to fundraise?</h2>
               </div>
               <div className="text-gray-700 lg:text-gray-200 mt-6 text-lg">
                 <p>
-                  Starting a fundraising campaign is intimidating for anyone, but we make it our mission to make the process as easy as possible for Advocates.
-                  Our <a href="/ideas" target="_blank" className="transition text-green-400 hover:text-green-300">Idea Bank</a> is a good way to start brainstorming possible campaign ideas - we've included an extensive list of proven ways to raise money for charity.
+                  The bottom line is that there are no set rules for fundraising - the process will be different for everyone.
+                  From simply reaching out to friends and family to organizing an entire fundraising event, feel free to get as creative and ambitious as you want!
                 </p>
                 <p className="mt-6 text-lg">
-                  Below, we've also included several resources to easily kickstart your fundraising campaign.
+                  Want some inspiration? We've got that too!
+                </p>
+                <p className="mt-6 text-lg">
+                  Our <a href="/ideas" target="_blank" className="transition text-green-400 hover:text-green-300">Idea Bank</a> is a great way to start brainstorming possible campaign ideas - we've included an extensive list of proven ways to raise money for charity.
+                  Directly below, we've also included several resources to easily kickstart your fundraising campaign.
                   Feel free to use any of our templates, and don't be afraid to modify and personalize them to your needs!
                 </p>
               </div>
