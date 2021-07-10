@@ -11,6 +11,7 @@ import Login from './Login';
 import Profile from './Profile';
 import ReturnFromEmail from './ReturnFromEmail';
 import IdeaBank from './IdeaBank';
+import LinkDemo from './LinkDemo';
 
 // campaigns
 import DemoCampaign from './campaigns/DemoCampaign.js';
@@ -90,6 +91,13 @@ export default class App extends React.Component {
 							path="/ideas"
 							render={() => (
 								<IdeaBank />
+							)}
+						/>
+						<Route
+							exact
+							path="/linkdemo"
+							render={() => (
+								<LinkDemo />
 							)}
 						/>
 						<Route
