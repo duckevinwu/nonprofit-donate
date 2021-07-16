@@ -12,6 +12,7 @@ import Profile from './Profile';
 import ReturnFromEmail from './ReturnFromEmail';
 import IdeaBank from './IdeaBank';
 import LinkDemo from './LinkDemo';
+import Influencers from './Influencers';
 
 // campaigns
 import DemoCampaign from './campaigns/DemoCampaign.js';
@@ -98,6 +99,13 @@ export default class App extends React.Component {
 							path="/linkdemo"
 							render={() => (
 								<LinkDemo />
+							)}
+						/>
+						<Route
+							exact
+							path="/ambassador"
+							render={() => (
+								<Influencers />
 							)}
 						/>
 						<Route
