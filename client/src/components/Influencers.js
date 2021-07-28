@@ -22,7 +22,7 @@ export default class Influencers extends React.Component {
           <div className="container mx-auto px-3 py-12 lg:px-5">
             <div className="flex flex-col md:flex-row w-full">
               <div className="w-full md:w-1/2 md:mr-6 flex flex-col justify-center">
-                <p className="border-l-4 border-gray-400 pl-2 text-lg sm:text-xl text-gray-600">Benefact Ambassador Program</p>
+                <p className="border-l-4 border-gray-400 pl-2 text-lg sm:text-xl text-gray-600">Youtube Ambassador Program</p>
                 <h2 className="mt-6 questrial font-bold text-4xl sm:text-5xl lg:text-6xl">Get <font className="questrial font-bold text-green-400">paid</font> to support a nonprofit</h2>
               </div>
               <div className="w-full md:w-1/2 flex justify-center">
@@ -34,12 +34,12 @@ export default class Influencers extends React.Component {
         <section id="nonprofits" className="bg-green-50 pt-12">
           <div className="container mx-auto px-3 lg:px-5">
             <h3 className="questrial uppercase text-gray-600 tracking-widest">For Youtubers</h3>
-            <h2 className="questrial text-4xl mt-6 mb-16 font-bold">Make more by giving back.</h2>
+            <h2 className="questrial text-4xl mt-6 mb-16 font-bold">Make money by giving back.</h2>
             <div className="flex flex-col lg:flex-row">
               <div className="pb-12 lg:w-1/3 lg:pr-6">
                 <img className="w-28 h-28" src={share} alt="share"></img>
                 <div className="flex flex-col py-6">
-                  <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Support a nonprofit</h3>
+                  <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Represent a nonprofit</h3>
                   <p className="mt-2 text-gray-600">We'll make sure you're matched with a nonprofit that relates to your channel. For example, if you make food videos, we’ll pair you with a food-related nonprofit (food rescue, distribution, hunger relief, etc.)</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default class Influencers extends React.Component {
                     Our Ambassador program works exactly like your brand deals or sponsorships.
                   </p>
                   <p className="text-gray-600 border-l-4 border-gray-600 pl-2 mt-6">
-                    Instead of supporting another brand deal, you’ll be supporting a great cause and get paid to do so.
+                    Instead of doing another brand deal, you’ll be supporting a great cause and getting paid to do so.
                   </p>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default class Influencers extends React.Component {
                   src="https://i.ibb.co/fChGK80/volunteer.jpg"
                   effect="blur"
                   className="solution-image object-cover h-full w-full rounded-md shadow-2xl"
-                  wrapperClassName=""
+                  wrapperClassName="w-full h-full"
                 />
               </div>
             </div>
@@ -102,7 +102,7 @@ export default class Influencers extends React.Component {
                   src="https://i.ibb.co/dJdS1K8/105371521.jpg"
                   effect="blur"
                   className="solution-image object-cover h-full w-full rounded-md shadow-2xl"
-                  wrapperClassName=""
+                  wrapperClassName="w-full h-full"
                 />
               </div>
             </div>
@@ -116,6 +116,11 @@ export default class Influencers extends React.Component {
                   <p className="text-gray-600 border-l-4 border-gray-600 pl-2 mt-6">
                     Every time one of your followers donates, they’ll receive a neat perk and make an impact on a local nonprofit.
                   </p>
+                  <div>
+                    <a href="/nonprofits/sharingexcess" target="_blank">
+                      <button className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Check out one of our campaigns <i className="bi-chevron-right"></i></button>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="mt-8 lg:mt-0 lg:w-1/2">
@@ -124,7 +129,7 @@ export default class Influencers extends React.Component {
                   src="https://i.ibb.co/vds4N54/110571521.png"
                   effect="blur"
                   className="solution-image object-cover h-full w-full rounded-md shadow-2xl"
-                  wrapperClassName=""
+                  wrapperClassName="w-full h-full"
                 />
               </div>
             </div>
@@ -146,7 +151,7 @@ export default class Influencers extends React.Component {
                   src="https://i.ibb.co/w6KrwFy/105871521.jpg"
                   effect="blur"
                   className="solution-image object-cover h-full w-full rounded-md shadow-2xl"
-                  wrapperClassName=""
+                  wrapperClassName="w-full h-full"
                 />
               </div>
             </div>
