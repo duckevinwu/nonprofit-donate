@@ -22,8 +22,11 @@ export default class Influencers extends React.Component {
           <div className="container mx-auto px-3 py-12 lg:px-5">
             <div className="flex flex-col md:flex-row w-full">
               <div className="w-full md:w-1/2 md:mr-6 flex flex-col justify-center">
-                <p className="border-l-4 border-gray-400 pl-2 text-lg sm:text-xl text-gray-600">Youtube Ambassador Program</p>
-                <h2 className="mt-6 questrial font-bold text-4xl sm:text-5xl lg:text-6xl">Get <font className="questrial font-bold text-green-400">paid</font> to support a nonprofit</h2>
+                <div className="flex flex-col sm:flex-row items-center">
+                  <i className="bi-youtube text-red-500 text-3xl mr-2"></i>
+                  <p className="text-lg sm:text-xl text-gray-600">Youtube Ambassador Program</p>
+                </div>
+                <h2 className="text-center sm:text-left mt-6 questrial font-bold text-4xl sm:text-5xl lg:text-6xl">Get <font className="questrial font-bold text-green-400">paid</font> to support a nonprofit</h2>
               </div>
               <div className="w-full md:w-1/2 flex justify-center">
                 <img className="h-96 w-96" alt="support" src={support}></img>
