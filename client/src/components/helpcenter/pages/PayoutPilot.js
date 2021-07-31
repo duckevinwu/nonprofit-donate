@@ -26,7 +26,7 @@ export default class PayoutPilot extends React.Component {
             <div className="mt-12">
               <h3 className="text-2xl">How will you be paid?</h3>
               <p className="text-gray-700 mt-4">
-                Benefact will send you a digital check to the email address you used to sign up to be an Advocate.
+                Benefact will send you a digital check to the email address you used to sign up to be a fundraiser.
                 When you receive this email, you'll have 2 options to transfer the money into your bank account: ACH Transfer or Printed Check.
               </p>
               <p className="text-gray-700 mt-4">

@@ -170,8 +170,8 @@ export default class SharingExcess extends React.Component {
                           <span className="bg-gray-300 h-4 mt-1 mb-2 w-16 animate-pulse"></span>
                           }
                           <div className="text-xs text-gray-700 flex">
-                            <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
-                              advocates
+                            <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Fundraiser earns money by raising money for a nonprofit">
+                              fundraisers
                             </div>
                           </div>
                         </div>
@@ -197,7 +197,7 @@ export default class SharingExcess extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <button onClick={this.openModal} className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                    <button onClick={this.openModal} className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become a Fundraiser</button>
                     <a href="https://givebutter.com/sharingexcessdemo" target="_blank" rel="noopener noreferrer" className="mt-4">
                       <button className="w-full transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View our campaign</button>
                     </a>
@@ -265,8 +265,8 @@ export default class SharingExcess extends React.Component {
                           <span className="bg-gray-300 h-6 mt-1 mb-2 w-16 animate-pulse"></span>
                           }
                           <div className="text-sm text-gray-700 flex">
-                            <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Advocate is a fundraiser (you!) that earns money by fundraising for a nonprofit">
-                              advocates
+                            <div className="border-b border-gray-400 border-dotted" data-tooltip="A Benefact Fundraiser earns money by raising money for a nonprofit">
+                              fundraisers
                             </div>
                           </div>
                         </div>
@@ -281,7 +281,7 @@ export default class SharingExcess extends React.Component {
                           </div>
                         </div>
                       </div>
-                      <button onClick={this.openModal} className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                      <button onClick={this.openModal} className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become a Fundraiser</button>
                       <a href="https://givebutter.com/sharingexcessdemo" target="_blank" rel="noopener noreferrer" className="mt-4">
                         <button className="w-full transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">View our campaign</button>
                       </a>
@@ -308,7 +308,7 @@ export default class SharingExcess extends React.Component {
               <label htmlFor="tab3" id="tab3-label" onClick={this.handleTabChange} className="tab3-icon">How to fundraise</label>
               <label htmlFor="tab4" id="tab4-label" onClick={this.handleTabChange} className="tab4-icon">Join our community</label>
               <div className={`ml-auto hidden lg:flex lg:${this.state.hidden}`}>
-                <button onClick={this.openModal} className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                <button onClick={this.openModal} className="nav-advocate-button transition duration-300 ease-in-out text-white bg-black border-0 py-2 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become a Fundraiser</button>
               </div>
             </div>
           </div>
@@ -345,18 +345,18 @@ export default class SharingExcess extends React.Component {
                     />
                     <div className="text-lg">
                       <p className="">
-                        By becoming an Advocate, you’ll get paid to fundraise for us.
+                        By becoming a fundraiser, you’ll get paid to raise money for us.
                         But this is so much more than another income stream for you — every dollar you raise amounts to 8 meals for families in need!
                         You’ll be making a direct impact on the lives of families in Philadelphia while getting compensated for your time and effort — it’s a win-win.
                       </p>
                     </div>
                     <div className="border-l-6 border-black pl-3 my-8">
                       <h4 className="questrial font-bold text-3xl">
-                        If you want to reduce food insecurity and get paid to do so, become an Advocate today!
+                        If you want to reduce food insecurity and get paid to do so, become a fundraiser today!
                       </h4>
                     </div>
                     <div className="flex justify-center">
-                      <button onClick={this.openModal} className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become an Advocate</button>
+                      <button onClick={this.openModal} className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become a Fundraiser</button>
                     </div>
                   </div>
                 </div>
@@ -371,11 +371,11 @@ export default class SharingExcess extends React.Component {
                         <div className="text-red-500 text-8xl font-bold questrial">1</div>
                         <i className="ml-auto bi-box-arrow-in-right text-4xl text-red-500"></i>
                       </div>
-                      <div className="mt-auto questrial text-2xl font-bold">Sign up to be an Advocate</div>
+                      <div className="mt-auto questrial text-2xl font-bold">Sign up to be a Fundraiser</div>
                     </div>
                     <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
                       <p className="text-gray-600">All you have to do is fill out a simple form with your name, email, and other basic details.</p>
-                      <button onClick={this.openModal} className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Become an Advocate <i className="bi-chevron-right"></i></button>
+                      <button onClick={this.openModal} className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Become a Fundraiser <i className="bi-chevron-right"></i></button>
                     </div>
                   </div>
                   <div className="flex flex-col md:flex-row items-center mt-12">
@@ -441,8 +441,8 @@ export default class SharingExcess extends React.Component {
                     <h2 className="questrial font-bold text-4xl lg:text-5xl mb-4 text-center">Our <font className="text-green-400 questrial">commmunity</font> is here to support you</h2>
                     <div className="mt-4 mb-8">
                       <p className="text-md">
-                        We want to foster a welcoming and supportive group of Advocates, so please feel free to join our Discord server or chat with us now!
-                        In our Discord, you can ask questions to our Advocate community, discover unique fundraising ideas, and chat with the Benefact admin team.
+                        We want to foster a welcoming and supportive group of fundraisers, so please feel free to join our Discord server or chat with us now!
+                        In our Discord, you can ask questions to our fundraiser community, discover unique fundraising ideas, and chat with the Benefact admin team.
                         If you have a quick question or comment, click the bubble in the bottom right to speak with us now!
                       </p>
                     </div>

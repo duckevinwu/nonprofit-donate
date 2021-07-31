@@ -16,7 +16,7 @@ export default class Footer extends React.Component {
             <div className="lg:w-1/3 w-full px-4"></div>
             <div className="lg:w-1/3 md:w-1/2 w-full px-4 mb-10 md:mb-0">
               <div>
-                <h2 className="font-bold font-medium text-white tracking-widest text-sm mb-3 uppercase">For Advocates</h2>
+                <h2 className="font-bold font-medium text-white tracking-widest text-sm mb-3 uppercase">For Fundraisers</h2>
                 <nav className="list-none">
                   <li className="">
                     <a href="/nonprofits"className="text-sm text-gray-200 hover:text-green-400 cursor-pointer">Explore Nonprofits</a>

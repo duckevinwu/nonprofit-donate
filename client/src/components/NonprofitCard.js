@@ -45,7 +45,7 @@ export default class NonprofitCard extends React.Component {
               <div className="flex">
                 <div className="w-1/2 mr-2">
                   <p className="font-semibold text-lg">{this.props.advocates}</p>
-                  <p className="text-xs text-gray-700">Advocates</p>
+                  <p className="text-xs text-gray-700">fundraisers</p>
                 </div>
                 <div className="w-1/2">
                   <p className="font-semibold text-lg">{this.props.share}</p>

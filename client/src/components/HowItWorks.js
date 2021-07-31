@@ -11,11 +11,11 @@ export default class HowItWorks extends React.Component {
               <div className="text-red-500 text-8xl font-bold questrial">1</div>
               <i className="ml-auto bi-box-arrow-in-right text-4xl text-red-500"></i>
             </div>
-            <div className="mt-auto questrial text-2xl font-bold">Sign up to be an Advocate</div>
+            <div className="mt-auto questrial text-2xl font-bold">Sign up to be a fundraiser</div>
           </div>
           <div className="w-full sm:w-1/2 md:w-2/3 md:pl-6 md:pt-0 pt-8">
             <p className="text-gray-600">All you have to do is fill out a simple form with your name, email, and other basic details.</p>
-            <button className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Become an Advocate <i className="bi-chevron-right"></i></button>
+            <button className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Become a fundraiser <i className="bi-chevron-right"></i></button>
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-center mt-12">

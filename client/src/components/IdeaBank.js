@@ -26,7 +26,7 @@ export default class IdeaBank extends React.Component {
       },
       {
         title: "Honor someone special",
-        description: "To make your campaign extra special, you can dedicate your fundraiser to someone special. This can be someone you know or don’t know. For instance, if you’re fundraising for Habitat for Humanity, you can dedicate your fundraiser to your great-grandfather who was passionate about affordable housing. Or you could honor the late Millard Fuller, co-founder of Habitat for Humanity, who passed away in 2009. To dedicate your fundraiser, you can (1) simply talk about your honoree when you’re spreading the word about your fundraiser or (2) include a description of your honoree in the “Your mission” portion of your Advocate registration form.",
+        description: "To make your campaign extra special, you can dedicate your fundraiser to someone special. This can be someone you know or don’t know. For instance, if you’re fundraising for Habitat for Humanity, you can dedicate your fundraiser to your great-grandfather who was passionate about affordable housing. Or you could honor the late Millard Fuller, co-founder of Habitat for Humanity, who passed away in 2009. To dedicate your fundraiser, you can (1) simply talk about your honoree when you’re spreading the word about your fundraiser or (2) include a description of your honoree in the “Your mission” portion of your fundraiser registration form.",
         icon: 'bi-award',
         color: 'yellow'
       },
@@ -120,7 +120,7 @@ export default class IdeaBank extends React.Component {
         color: "green"
       },
       {
-        text: "Add a personal touch to your campaign. When you register to be an Advocate, you can write about your personal motivation to run a campaign in the “Your mission” question.",
+        text: "Add a personal touch to your campaign. When you register to be a fundraiser, you can write about your personal motivation to run a campaign in the “Your mission” question.",
         color: "black"
       },
       {
@@ -140,7 +140,7 @@ export default class IdeaBank extends React.Component {
         color: "black"
       },
       {
-        text: "Get your friends involved. Even if they are not official Advocates on Benefact, your friends can help you spread the word in small ways, such as word-of-mouth, text messages, or social media.",
+        text: "Get your friends involved. Even if they are not official fundraisers on Benefact, your friends can help you spread the word in small ways, such as word-of-mouth, text messages, or social media.",
         color: "green"
       }
     ]

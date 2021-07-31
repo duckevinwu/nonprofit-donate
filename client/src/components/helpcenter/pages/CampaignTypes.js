@@ -15,7 +15,7 @@ export default class CampaignTypes extends React.Component {
             </div>
             <p className="mt-3 text-gray-700">
               At Benefact, it's our goal to help you fundraise in the most enjoyable and effective way possible.
-              To do so, we've divided campaigns Advocates can run into two categories: <b>One-time Campaigns</b> and <b>Running Campaigns</b>.
+              To do so, we've divided campaigns fundraisers can run into two categories: <b>One-time Campaigns</b> and <b>Running Campaigns</b>.
               Each type of campaign has its own unique perks and benefits - it's up to you to decide which one you want to go with!
             </p>
             <p className="mt-3 text-gray-700">
