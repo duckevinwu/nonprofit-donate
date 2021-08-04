@@ -50,7 +50,7 @@ export default class Influencers extends React.Component {
                 <img className="w-28 h-28" src={community} alt="community"></img>
                 <div className="flex flex-col py-6">
                   <h3 className="questrial text-2xl font-bold border-l-4 pl-2 border-black">Spread the word</h3>
-                  <p className="mt-2 text-gray-600">Just like your sponsorships or brand deals, all you have to do is talk about the nonprofit in your video, including a link in your video description, post about it on your socials, or anything else! </p>
+                  <p className="mt-2 text-gray-600">Just like your sponsorships or brand deals, all you have to do is talk about the nonprofit in your video, include a link in your video description, post about it on your socials, or anything else! </p>
                 </div>
               </div>
               <div className="pb-12 lg:w-1/3">
@@ -120,7 +120,7 @@ export default class Influencers extends React.Component {
                     Every time one of your followers donates, they’ll receive a neat perk and make an impact on a local nonprofit.
                   </p>
                   <div>
-                    <a href="/nonprofits/sharingexcess" target="_blank">
+                    <a href="https://givebutter.com/sharingexcess" target="_blank" rel="noopener noreferrer">
                       <button className="mt-6 questrial text-black text-lg font-bold transition duration-150 hover:text-green-500 cursor-pointer">Check out one of our campaigns <i className="bi-chevron-right"></i></button>
                     </a>
                   </div>
