@@ -198,7 +198,7 @@ export default class SharingExcess extends React.Component {
                       </div>
                     </div>
                     <button onClick={this.openModal} className="transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become a Fundraiser</button>
-                    <a href="https://givebutter.com/sharingexcessdemo" target="_blank" rel="noopener noreferrer" className="mt-4">
+                    <a href="https://givebutter.com/sharingexcess" target="_blank" rel="noopener noreferrer" className="mt-4">
                       <button className="w-full transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 cursor-pointer">View our campaign</button>
                     </a>
                   </div>
@@ -282,7 +282,7 @@ export default class SharingExcess extends React.Component {
                         </div>
                       </div>
                       <button onClick={this.openModal} className="mt-6 transition duration-300 ease-in-out text-white bg-black border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-400 hover:text-black cursor-pointer">Become a Fundraiser</button>
-                      <a href="https://givebutter.com/sharingexcessdemo" target="_blank" rel="noopener noreferrer" className="mt-4">
+                      <a href="https://givebutter.com/sharingexcess" target="_blank" rel="noopener noreferrer" className="mt-4">
                         <button className="w-full transition duration-300 ease-in-out text-white bg-green-500 border-0 py-3 px-6 focus:outline-none rounded hover:bg-green-600 cursor-pointer">View our campaign</button>
                       </a>
                     </div>
