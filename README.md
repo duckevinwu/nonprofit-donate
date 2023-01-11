@@ -1,6 +1,6 @@
 # Nonprofit Donate
 
-Currently hosted [here]('https://nonprofit-donate.herokuapp.com/')
+A platform for nonprofits to leverage affiliate peer-to-peer fundraising
 
 ## Installation (local)
 
